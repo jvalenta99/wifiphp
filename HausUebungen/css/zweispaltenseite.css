@@ -1,0 +1,68 @@
+div {
+    margin: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li a {
+    display: block;
+    
+    margin: 0.5rem 0px;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+ul li {
+    padding 10px;
+}
+#oben {
+    background-color: beige;
+    padding: 5px 20px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+#oben h1 {
+    margin 0px;
+}
+
+
+#mitte {
+    display: flex;
+    overflow: hidden;
+    
+    color: rgb(0, 0, 0);
+    
+    align-items: center;
+}
+
+#links {
+    
+    background-color: beige;
+    text-align: right;  
+    height: 100%;
+}
+
+
+
+#rechts {
+    padding: 1em;
+    flex-grow: 1;
+
+}
+
+#fussbereich {
+    background-color: beige;
+    padding: 5px 20px;
+
+}
