@@ -37,6 +37,45 @@
         echo '<br>';
         echo addieren2(12,2222);
 
+        function subtrahieren($zahl1, $zahl2){
+            return $zahl1 - $zahl2;
+        }
+
+        function multiplizieren($zahl1, $zahl2){
+            return $zahl1 * $zahl2;
+        }
+        echo '<br>';
+        echo subtrahieren(5,3);
+        echo '<br>';
+        echo multiplizieren(3,4);
+        echo '<br>';
+
+        function greaterThanFive($zahl1){
+            if ($zahl1>5){
+                return true;
+            } else {
+                return false;
+            }
+            
+        }//greaterThanFive
+
+        echo '<br>';
+        var_dump(greaterThanFive(3));
+        echo '<br>';
+        var_dump(greaterThanFive(6));
+
+        function isEven($nr){
+            if($nr%2 == 0){
+                return true;
+            }
+            return false;
+        }
+
+        
+        echo '<br>';
+        var_dump(isEven(187));
+        echo '<br>';
+        var_dump(isEven(186));
 
     ?>
     
