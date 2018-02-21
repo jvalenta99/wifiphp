@@ -1,15 +1,11 @@
 <?php
-require_once './lib/wifi-lib.php';
-require_once './lib/contact-form.conf.php';
-
+require_once 'lib/wifi-lib.php';
 
 $posted = isSent();
 
 if ($posted) {
     if( exists('contact_name')){
-        if (required('contact_name')){
-            echo 'Jipie';
-        }
+        echo 'Jipie';
     }
 }
 
