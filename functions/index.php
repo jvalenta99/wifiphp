@@ -18,6 +18,26 @@
         }
 
         firstFunction();
+
+        function addieren1(){
+            return 12+13;
+        }
+
+        echo 'Die Summe lautet: ' .addieren1( );
+
+        function addieren2($zahl1, $zahl2){
+            return $zahl1 + $zahl2;
+        }
+        echo '<br>';
+        echo addieren2(12,123);
+
+        echo '<br>';
+        echo addieren2(12,45);
+
+        echo '<br>';
+        echo addieren2(12,2222);
+
+
     ?>
     
 </body>
