@@ -20,13 +20,3 @@ main {
     border-radius: 12px;
     box-shadow: 0 0 4px 0 #999;
 }
-
-.form-errors {
-    width: 80%;
-    padding: 1em;
-    background-color: #ffd3d3;
-    border: 3px solid #f72020;
-    border-radius: 6px;
-    color: #3f0000;
-    margin-bottom: 2em;
-}
