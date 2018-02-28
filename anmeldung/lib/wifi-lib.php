@@ -40,7 +40,7 @@ function required($var) {
      
      return exists($var) == false $_POST[$var] != '';
     */
-    if ( exists($var) == true && $_POST[$var] != '' ) {
+    if ( exists($var) === true && $_POST[$var] !== '' ) {
         return true;
     }
 
@@ -177,6 +177,13 @@ function validate_dataType($value, $dataType, $fieldName, &$errors) {
     return true;
 }
 
+/**
+ * Prüft ob ein String die angegebene minimale Länge hat
+ *
+ * @param [string] $value
+ * @param [int] $minlength
+ * @return bool
+ */
 function validate_minlength($value, $minlength) {
     if (strlen($value) >= $minlength) {
         return true;
@@ -185,10 +192,94 @@ function validate_minlength($value, $minlength) {
     return false;
 }
 
+
+/**
+ * Prüft ob ein String die angegebene maximale Länge hat
+ *
+ * @param [string] $value
+ * @param [int] $maxlength
+ * @return bool
+ */
 function validate_maxlength($value, $maxlength) {
     if (strlen($value) <= $maxlength) {
         return true;
     }
 
     return false;
+}
+
+/**
+ * Prüft ob Zahl mindestens einem Mindestwert entspricht
+ *
+ * @param [Number] $value
+ * @param [Number] $min
+ * @return bool
+ */
+function validate_min($value, $min) {
+    if ($value >= $min) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Prüft ob Zahl höchstens einem Höchstwert entspricht
+ *
+ * @param [Number] $value
+ * @param [Number] $max
+ * @return bool
+ */
+function validate_max($value, $max) {
+    if ($value <= $max) {
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Prüft diverse Validierungen, die in $conf angegeben sind. $errors wird referenziert,
+ * dh. die Meldungen werden auch außen abrufbar sein.
+ *
+ * @param [mixed] $value
+ * @param [string] $fieldName
+ * @param [array] $conf
+ * @param [array] &$errors
+ * @return bool
+ */
+function validate_misc($value, $fieldName, $conf, &$errors) {
+    // Minlength
+    if (array_key_exists('minlength', $conf)) {
+        if (!validate_minlength($value, $conf['minlength'])) {
+            $errors[$fieldName] = "Geben Sie mindestens {$conf['minlength']} Zeichen ein";
+            return false;
+        }
+    }
+
+    // Maxlength
+    if (array_key_exists('maxlength', $conf)) {
+        if (!validate_maxlength($value, $conf['maxlength'])) {
+            $errors[$fieldName] = "Geben Sie höchstens {$conf['maxlength']} Zeichen ein";
+            return false;
+        }
+    }
+
+    // Min
+    if (array_key_exists('min', $conf)) {
+        if (!validate_min($value, $conf['min'])) {
+            $errors[$fieldName] = "Geben Sie mindestens {$conf['min']} ein";
+            return false;
+        }
+    }
+
+    // Max
+    if (array_key_exists('max', $conf)) {
+        if (!validate_max($value, $conf['max'])) {
+            $errors[$fieldName] = "Geben Sie höchstens {$conf['max']} ein";
+            return false;
+        }
+    }
+
+    return true;
 }
