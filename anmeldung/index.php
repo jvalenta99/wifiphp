@@ -29,9 +29,29 @@ if($isSent) {
                 validate_misc($value, $fieldName, $conf, $errors);
             }
         }
+    } //end foreach
+
+    if (!array_key_exists('password',$errors) && !array_key_exists('password_confirm',$errors)) {
+        	if ($_POST['password']!==$_POST['password_confirm']){
+                $errors['password_confirm'] = 'Passwort und Passwort mussen gleich sein';
+            }
+    } else {
+        $formValid = true;
     }
 }
 
+$formValid = true;
+if ($formValid){
+    $file = fopen('./registered.csv','a');
+    $content = $_POST['name'].
+                ',' .
+                $_POST['email'].
+                ',' .
+                 $_POST['password'] .
+                 "\n";
+                fwrite($file, $content);
+                fclose($file);
+}
 ?>
 <!DOCTYPE html>
 <html lang="de">
