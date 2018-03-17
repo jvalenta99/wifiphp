@@ -1,12 +1,34 @@
 <?php
 
+$validTypes = [
+    'image/jpeg',
+    'image/gif',
+    'image/png'
+];
+
+$maxSize = 25000;
+
 if (count($_FILES) > 0 && array_key_exists('thefile', $_FILES)) {
+
+    
+    $errors = $_FILES['thefile']['error'] !== 0
+
+    $isValidType = in_array($_FILES['thefile']['type'], $validTypes);
+
+    $sizeOk = $_FILES['thefile']['size'] <= $maxSize;
+
     $saveTo ='./uploads';
     $saveTo .= $_FILES['thefile']['name'];
-    echo $saveTo;
+
+    if (!$errors && $isValidType && $sizeOk){
+    //echo $saveTo;
 
     move_uploaded_file($_FILES['thefile']['tmp_name'], $saveTo);
     //print_r($_FILES);
+    }
+    else {
+        $msg= 'Es trat ein Fehler auf';
+    }
 }
 
 ?>
@@ -29,6 +51,8 @@ if (count($_FILES) > 0 && array_key_exists('thefile', $_FILES)) {
 
 <main>
     <h2>Das Formular</h2>
+
+    <?php $msg ?>
     <!-- 
         ACHTUNG: beim file upload MUSS der enctype entsprechend gesetzt sein:
         enctype="multipart/form-data"
