@@ -88,7 +88,7 @@ show table status;
 
 alter table bundesland 
 	drop foreign key bundesland_ibfk_1;
-    
+   
 alter table bundesland 
 	add constraint counfkx foreign key (counShort) references countries(short)
     on delete set null
