@@ -15,12 +15,19 @@
 <body>
     <?php 
         require_once 'formgen/Input.php'; 
+        require_once 'formgen/Textarea.php'; 
+        require_once 'formgen/Checkbox.php'; 
         require_once 'form-conf.php'; 
     ?>
 
     <form action="" method="post" class="pure-form pure-form-stacked">
     <?php
-        $vn = new Input('vorname', $conf['vorname']);
+        $vn = new Checkbox('vorname', $conf['vorname']);
+        var_dump($vn);
+        echo $vn->render();
+       /*  echo $vn->renderLabel();
+        echo '<p>Beschreibung</p>';
+        echo $vn->renderField(); */
 
     ?>
     </form> 

@@ -41,12 +41,49 @@ class Input {
         if (array_key_exists('tagAttributes', $fieldConf) && is_array($fieldConf['tagAttributes'])) {
             $this->tagAttributes = $fieldConf['tagAttributes']; 
         }
-        print_r($this);
+
     }
 
+    /**
+     * render
+     *
+     * @return void
+     */
     public function render() {
-        $out = '';
+        // Label rendern
+        $out = $this->renderLabel();
+        // Input rendern
+        $out .= $this->renderField();
+        // Error rendern
 
+        return $out;
+    }
+
+    public function renderLabel() {
+        $out = '<label for="' . $this->id . '">' .
+                $this->label .
+                '</label>';
+        return $out;
+    }
+
+    public function renderField() {
+        $out = '<input type="' . $this->type . '" ' .
+                'name="' . $this->name . '" ' .
+                'value="' . $this->value . '" ' .
+                'id="' . $this->id . '"';
+
+        // Tag Attributes
+        $out .= $this->renderTagAttributes();
+        // Tag schließen
+        $out .= '>';
+        return $out;
+    }
+
+    protected function renderTagAttributes() {
+        $out = '';
+        foreach($this->tagAttributes as $attr => $val) {
+            $out .= " $attr=\"$val\"";
+        }
         return $out;
     }
 

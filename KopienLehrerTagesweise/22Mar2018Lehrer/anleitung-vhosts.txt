@@ -1,0 +1,22 @@
+Virtual host unter wamp einrichten:
+C:\wamp64\bin\apache\apache2.4.27\conf\extra\httpd-vhosts.conf
+
+Beispiel:
+<VirtualHost *:80>
+  ServerName login.dv      
+  ServerAlias www.login.dv
+  DocumentRoot "${INSTALL_DIR}/www/login"
+  <Directory "${INSTALL_DIR}/www/login/">
+    Options +Indexes +Includes +FollowSymLinks +MultiViews
+    AllowOverride All
+    Require local
+  </Directory>
+</VirtualHost>
+
+Adresse in Windows bekannt geben:
+C:\Windows\System32\drivers\etc\hosts
+
+Beispiel: login.dv auf localhost (127.0.0.1) umleiten
+127.0.0.1	login.dv
+
+Server neu starten!
