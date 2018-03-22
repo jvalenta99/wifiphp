@@ -24,5 +24,5 @@ class Checkbox extends Input {
         $out .= $this->label .'</label>';
 
         return $out;
-    }
+    }//
 }
