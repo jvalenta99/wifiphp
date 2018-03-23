@@ -177,31 +177,8 @@ function validate_dataType($value, $dataType, $fieldName, &$errors) {
     return true;
 }
 
-/**
- * Prüft ob ein String die angegebene minimale Länge hat
- *
- * @param [string] $value
- * @param [int] $minlength
- * @return bool
- */
 function validate_minlength($value, $minlength) {
     if (strlen($value) >= $minlength) {
-        return true;
-    }
-
-    return false;
-}
-
-
-/**
- * Prüft ob ein String die angegebene maximale Länge hat
- *
- * @param [string] $value
- * @param [int] $maxlength
- * @return bool
- */
-function validate_maxlength($value, $maxlength) {
-    if (strlen($value) <= $maxlength) {
         return true;
     }
 
