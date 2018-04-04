@@ -69,8 +69,7 @@ $conf = [
             ],
             'validationRules' =>'required',
             'filterRules' => 'trim|sanitize_string'
-        ]
-        ,
+        ],
         'email' => [
             'type' => 'email',
             'id' => 'feldEmail',
