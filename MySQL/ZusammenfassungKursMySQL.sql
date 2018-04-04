@@ -506,7 +506,58 @@ create table Kunden(
        delete from Ort where ortId = 1;
        
 
--- ENDE TEIL 1 (tag 3)***************************************************************
+-- ENDE TEIL 1 (tag 3) ***************************************************************
+
+--  TEIL 2 (tag 3) file_08.03_MySQL ***************************************************************
+create database wifitag3 charset utf8 collate utf8_unicode_ci;
+use wifitag3;
+
+drop table if exists Kunden;
+drop table if exists Ort;
+
+create table Ort ( 
+	ortId INT unsigned NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	ortName varchar(100) not null
+) engine InnoDB character set utf8 collate utf8_unicode_ci;
+                                
+                                
+insert into Ort (ortName) values ('Wien'),('St.Pölten');
+select *from Ort;
+
+create table Kunden(
+	kundId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	kundName varchar(100) not null ,
+	ortId int unsigned,
+    constraint orfkx foreign key (ortId) references Ort (ortId)
+    on delete cascade -- restrict, cascade, set null, no action
+    on update cascade -- restrict, cascade, set null, no action
+) engine InnoDB character set utf8 collate utf8_unicode_ci;
+                        
+                        
+	   insert into Kunden (kundName, ortId) values ('Peter',1);
+       insert into Kunden (kundName, ortId) values ('Martin',2);
+       insert into Kunden (kundName, ortId) values ('Anton', 1);
+       
+       
+       insert into Kunden (kundName, ortId) values ('Maria', null );
+       insert into Kunden (kundName, ortId) values ('Martin', null );
+       insert into Kunden (kundName, ortId) values ('Marta',  20);
+       
+       select * from Kunden;
+       
+       
+       show table status;
+       
+       select kundName, ortName
+       from Kunden 
+       join Ort on (Kunden.ortId = Ort.ortId);
+       
+       
+       update Ort set ortId = 1 where ortId = 10;
+       delete from Ort where ortId = 1;
+       
+--  ENDE TEIL 2 (tag 3) file8.3.usw***************************************************************
+
 -- TEIL 1 (tag 4) file 003***************************************************************
 
 use carsharing;
@@ -799,3 +850,311 @@ insert into statis (stat_text) values ('offen'), ('in Bearbeitung'), ('erledigt'
 select user_vn, user_nn from users where user_pk = 1;
 
 -- ENDE TEIL 1 (tag 5) **************************************************************
+
+-- *************** PROZEDUREN **************************************************
+use wifitag4;
+
+delimiter $$
+
+drop procedure if exists helloword $$ 
+create procedure helloword()
+begin
+ select 'Hallo World';
+end $$
+
+delimiter ;
+
+call helloword();
+
+-- *************** PROZEDUREN **************************************************
+use wifitag4;
+
+drop table if exists anwender;
+create table anwender(
+	id int unsigned not null auto_increment primary key,
+    vorname varchar(30)
+)engine=innodb;
+
+insert into anwender (vorname) values ('Peter'),('Maria'),('Sophia'); 
+
+delimiter $$
+
+
+drop procedure if exists paramdemo1 $$ 
+create procedure paramdemo1(in hhhh int unsigned)
+begin
+
+ select * from anwender where id = hhhh;
+ 
+end $$
+
+delimiter ;
+
+call paramdemo1(2);
+
+
+-- *************** PROZEDUREN **************************************************
+use wifitag4;
+
+drop table if exists anwender;
+create table anwender(
+	id int unsigned not null auto_increment primary key,
+    vorname varchar(30)
+)engine=innodb;
+
+insert into anwender (vorname) values ('Peter'),('Maria'),('Sophia'); 
+
+delimiter $$
+
+drop procedure if exists paramdemo2 $$ 
+create procedure paramdemo2( out anw varchar(30) )
+begin
+
+ select vorname into anw from anwender where id = 1;
+ 
+end $$
+
+delimiter ;
+
+call paramdemo2(@output);
+
+select @output;
+
+*****************************************************
+
+use wifitag4;
+
+drop table if exists anwender;
+create table anwender(
+	id int unsigned not null auto_increment primary key,
+    vorname varchar(30)
+)engine=innodb;
+
+insert into anwender (vorname) values ('Peter'),('Maria'),('Sophia'); 
+
+delimiter $$
+
+drop procedure if exists paramdemo2 $$ 
+create procedure paramdemo2( in ds int unsigned, out anw varchar(30) )
+begin
+
+ select vorname into anw from anwender where id = ds;
+ 
+end $$
+
+delimiter ;
+
+call paramdemo2(2, @output);
+
+select @output;
+
+*************************************************************
+use wifitag4;
+
+drop table if exists anwender;
+create table anwender(
+	id int unsigned not null auto_increment primary key,
+    vorname varchar(30)
+)engine=innodb;
+
+insert into anwender (vorname) values ('Peter'),('Maria'),('Sophia'); 
+
+delimiter $$
+
+drop procedure if exists paramdemo3 $$ 
+create procedure paramdemo3( inout anw varchar(30) )
+begin
+
+ select concat( vorname, ' (',id,')') into anw from anwender where vorname = anw;
+ 
+end $$
+
+delimiter ;
+
+set @anwender := 'Peter';
+
+call paramdemo3(@anwender);
+
+select @anwender;
+
+***********************************************************
+
+use wifitag4;
+
+drop table if exists konten;
+create table konten(
+	konto int unsigned not null auto_increment primary key,
+    saldo decimal(10,2) not null default 0.00
+)engine=innodb;
+
+insert into konten (konto,saldo) values (1,1000.00),(2,1000.00); 
+
+delimiter $$
+
+drop procedure if exists ueberweisung $$ 
+create procedure ueberweisung( in von int unsigned, in nach int unsigned, in betrag decimal(10,2) )
+begin
+	update konten set saldo = saldo - abs(betrag) where konto = von;
+	update konten set saldo = saldo + abs(betrag) where konto = nach;
+ 
+end $$
+
+delimiter ;
+
+
+call ueberweisung(1,2,500.00);
+
+select * from konten;
+
+*************************************************************
+
+use wifitag4;
+
+drop table if exists konten;
+create table konten(
+	konto int unsigned not null auto_increment primary key,
+    saldo decimal(10,2) not null default 0.00
+)engine=innodb;
+
+insert into konten (konto,saldo) values (1,1000.00),(2,1000.00); 
+
+delimiter $$
+
+drop procedure if exists ueberweisung $$ 
+create procedure ueberweisung( in von int unsigned, in nach int unsigned, in betrag decimal(10,2), out erfolg boolean )
+begin
+	-- declare Variable innerhalb der prodzedur
+	declare ktosaldo decimal(10,2) default 0.00;
+    declare vonkto int unsigned default 0;
+    declare nachkto int unsigned default 0;
+    
+    -- mit declare kann man auch einen handler definieren
+    declare exit handler for sqlexception, not found
+    begin
+		show warnings;
+        set erfolg := false;
+        rollback;
+    end;
+	
+    select konto into vonkto from konten where konto = von;
+    select konto into nachkto from konten where konto = nach;
+    
+    
+    start transaction;
+		select saldo into ktosaldo from konten where konto = von for update;
+		
+		-- if bedingung then else end if: abs ist absolut betrag entfernt -
+		if ktosaldo >= abs(betrag) then
+		
+			update konten set saldo = saldo - abs(betrag) where konto = von;
+			update konten set saldo = saldo + abs(betrag) where konto = nach;
+            set erfolg := true;
+			
+		else
+			set erfolg := false;
+		end if;
+    commit;
+    
+ 
+end $$
+
+delimiter ;
+
+set @output := false;
+call ueberweisung(1,2,3000.00, @output);
+
+select @output;
+
+select * from konten;
+
+*************************************************************
+
+use wifitag4;
+
+drop table if exists konten;
+create table konten(
+	konto int unsigned not null auto_increment primary key,
+    saldo decimal(10,2) not null default 0.00
+)engine=innodb;
+
+insert into konten (konto,saldo) values (1,1000.00),(2,1000.00); 
+
+delimiter $$
+
+drop procedure if exists ueberweisung $$ 
+create procedure ueberweisung( in von int unsigned, in nach int unsigned, in betrag decimal(10,2), out erfolg boolean )
+begin
+	-- declare Variable innerhalb der prodzedur
+	declare ktosaldo decimal(10,2) default 0.00;
+    declare vonkto int unsigned default 0;
+    declare nachkto int unsigned default 0;
+    
+    -- mit declare kann man auch einen handler definieren
+    declare exit handler for sqlexception, not found
+    begin
+		show warnings;
+        set erfolg := false;
+        rollback;
+    end;
+	
+    select konto into vonkto from konten where konto = von;
+    select konto into nachkto from konten where konto = nach;
+    
+    
+    start transaction;
+		select saldo into ktosaldo from konten where konto = von for update;
+		
+		-- if bedingung then else end if: abs ist absolut betrag entfernt -
+		if ktosaldo >= abs(betrag) then
+		
+			update konten set saldo = saldo - abs(betrag) where konto = von;
+			update konten set saldo = saldo + abs(betrag) where konto = nach;
+            set erfolg := true;
+			
+		else
+			set erfolg := false;
+		end if;
+    commit;
+    
+ 
+end $$
+
+delimiter ;
+
+set @output := false;
+call ueberweisung(1,2,3000.00, @output);
+
+select @output;
+
+select * from konten;
+
+***************************************************************
+use wifitag4;
+
+drop table if exists zufallszahl;
+create table zufallszahl(
+	zahl int unsigned not null
+)engine=innodb;
+
+
+delimiter $$
+
+drop procedure if exists zufall $$ 
+create procedure zufall( in anzahl int unsigned )
+begin
+	
+    while anzahl > 0 do
+		insert into zufallszahl (zahl) values ( floor( 1+rand()*100) );
+		set anzahl := anzahl-1;
+    end while;
+	
+ 
+end $$
+
+delimiter ;
+
+call zufall(1000);
+
+select count(*) from zufallszahl;
+
+*************************************************************
