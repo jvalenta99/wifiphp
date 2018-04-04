@@ -1,4 +1,5 @@
 <?php
+namespace Formgen;
 
 class Input {
     protected $name = '';
@@ -8,6 +9,12 @@ class Input {
     protected $label = '';
     protected $tagAttributes = [];
 
+    /**
+     * Konstruktor
+     *
+     * @param string $name
+     * @param array $fieldConf
+     */
     public function __construct(string $name, array $fieldConf)
     {
         // name
@@ -24,7 +31,10 @@ class Input {
             // TODO: id muss wirklich eindeutig sein
             $this->id = $this->name;
         }
-        $this->id = $fieldConf['id'];
+        
+        if (array_key_exists('id', $fieldConf)){
+            $this->id = $fieldConf['id'];
+        }
 
         // value optional
         if (array_key_exists('value', $fieldConf)) {
@@ -41,15 +51,14 @@ class Input {
         if (array_key_exists('tagAttributes', $fieldConf) && is_array($fieldConf['tagAttributes'])) {
             $this->tagAttributes = $fieldConf['tagAttributes']; 
         }
-
     }
 
     /**
-     * render
+     * Rendering von label, input und error
      *
-     * @return void
+     * @return string
      */
-    public function render() {
+    public function render() : string {
         // Label rendern
         $out = $this->renderLabel();
         // Input rendern
@@ -59,14 +68,24 @@ class Input {
         return $out;
     }
 
-    public function renderLabel() {
+    /**
+     * Rendering des label tags
+     *
+     * @return string
+     */
+    public function renderLabel() : string {
         $out = '<label for="' . $this->id . '">' .
                 $this->label .
                 '</label>';
         return $out;
     }
 
-    public function renderField() {
+    /**
+     * Rendering des input Feldes
+     *
+     * @return string
+     */
+    public function renderField() : string {
         $out = '<input type="' . $this->type . '" ' .
                 'name="' . $this->name . '" ' .
                 'value="' . $this->value . '" ' .
@@ -79,12 +98,16 @@ class Input {
         return $out;
     }
 
-    protected function renderTagAttributes() {
+    /**
+     * Rendering der optionalen Attribute des input tags
+     *
+     * @return string
+     */
+    protected function renderTagAttributes() : string {
         $out = '';
         foreach($this->tagAttributes as $attr => $val) {
             $out .= " $attr=\"$val\"";
         }
         return $out;
     }
-
 }

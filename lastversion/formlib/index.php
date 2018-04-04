@@ -14,22 +14,27 @@
 </head>
 <body>
     <?php 
-        require_once 'formgen/Input.php'; 
-        require_once 'formgen/Textarea.php'; 
-        require_once 'formgen/Checkbox.php'; 
-        require_once 'form-conf.php'; 
+        require_once 'init.php'; 
+        $form = new \Formgen\Form($conf);
+        echo $form->render();
     ?>
 
-    <form action="" method="post" class="pure-form pure-form-stacked">
+    <!-- <form action="" method="post" class="pure-form pure-form-stacked"> -->
     <?php
-        $vn = new Checkbox('vorname', $conf['vorname']);
-        var_dump($vn);
+        /* $anrede = new \Formgen\Radio('anrede', $conf['anrede']);
+        echo $anrede->render();
+        
+        $vn = new \Formgen\Checkbox('vorname', $conf['vorname']);
         echo $vn->render();
-       /*  echo $vn->renderLabel();
-        echo '<p>Beschreibung</p>';
-        echo $vn->renderField(); */
+        
+        $nn = new \Formgen\Input('nachname', $conf['nachname']);
+        echo $nn->render();
+       
+        $bl = new \Formgen\Select('bundeslaender', $conf['bundeslaender']);
+        echo $bl->render(); */
+        
 
     ?>
-    </form> 
+    <!-- </form>  -->
 </body>
 </html>
