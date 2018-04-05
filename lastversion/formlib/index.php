@@ -10,21 +10,46 @@
     body {
         padding: 2em;
     }
+    .error {
+        display: inline-block;
+        background-color: #900;
+        color: white;
+        padding: 0.25em;
+    }
     </style>
 </head>
 <body>
     <?php 
         require_once 'init.php'; 
         $form = new \Formgen\Form($conf);
-        /* echo '<pre>';
-        var_export($form);
-        echo '</pre>'; */
         
         if ($form->isSent()) {
-            echo 'yes';
-            $isValid = $form->isValid();
-           // echo $form->render();
-            // Validieren
+            $validData = $form->isValid();
+            if (!$validData) {
+                echo $form->render();
+            }
+            else {
+                            // Verbindung aufbauen, mysqli Objekt erzeugen
+                $mysqli = new mysqli('localhost', 'root', '', 'todos');
+
+                // Prüfen, ob die Verbindung erfolgreich war
+                if($mysqli->connect_errno) {
+                    die('Fehler DB Verbindung: ' . $mysqli->connect_error);
+                }
+                $customerNumber = 130;
+
+                // Eine Query liefert ein result Objekt
+                $res = $mysqli->query('SELECT * FROM customers WHERE customerNumber < ' . $customerNumber);
+                
+                // Zeilenweise die Resultate auslesen
+                while ($row = $res->fetch_assoc()) {
+                    var_export($row);
+                }
+                
+
+
+                //var_export($validData);
+            }
         } 
         else {
             echo $form->render();
