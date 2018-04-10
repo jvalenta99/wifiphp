@@ -46,7 +46,7 @@ class Checkbox extends Input {
         $out .= '<input type="checkbox" ' .
         'name="' . $this->name . '" ' .
         'value="' . $this->value . '" ' .
-        'id="' . $this->id . '"' .
+        'id="' . $this->id . '"'.
         $this->checked;
         
         // Tag Attributes
