@@ -1,0 +1,315 @@
+/***************************
+********* Basic ************
+***************************/
+
+* {
+    font-size: 18px;
+    text-align: center;
+}
+
+body {
+    min-height: 101vh;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/***************************
+**** HEADER - SECTION  *****
+***************************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgb(0, 192, 0);
+}
+
+.logo {
+    padding: 12px 20px;
+}
+
+.rahmen {
+    padding: 5px 5px 10px 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.425);
+    text-shadow: 0 0 2px gray;
+    background-color: white;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    min-width: 380px;
+    padding: 30px 20px;
+}
+
+@media only screen and (max-width: 1270px) {
+    .rahmen h2 {
+        font-size: 1.2rem;
+    }
+    .rahmen h3 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .title {
+        min-width: 150px;
+    }
+    .title h1 {
+        font-size: 2rem;
+    }
+    .title h2 {
+        font-size: 1rem;
+    }
+    .buchstaben {
+        width: 3.2rem;
+    }
+    .rechner {
+        padding-left: 10px
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .rahmen h2 {
+        font-size: 0.8rem;
+    }
+    .rahmen h3 {
+        font-size: 0.8rem;
+    }
+    .title {
+        min-width: 100px;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    .title h2 {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .zeichen {
+        display: none;
+    }
+    .rechner {
+        display: none;
+    }
+    .title {
+        min-width: 80px;
+    }
+    .title h1 {
+        font-size: 1.5rem;
+    }
+    .title h2 {
+        font-size: 0.8rem;
+    }
+    .buchstaben {
+        /* padding: 0 5px; */
+        width: 2.2rem;
+    }
+}
+
+
+/***************************
+***** LOGIN - SECTION *****
+***************************/
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(101vh - 216px);
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.login_form label {
+    margin-left: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.login_form input {
+    margin: 10px 60px 45px 20px;
+}
+
+.login_form input:last-child {
+    margin: 0px 20px 10px 20px;
+}
+
+.login_form .error {
+    margin: -48px 0px 0px 20px;
+    padding: 8px 0px 22px 0px;
+    color: red;
+}
+
+
+/***************************
+***** INPUT - SECTION *****
+***************************/
+
+.input {
+    background-color: white;
+    color: black;
+}
+
+.input_box {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 0px 5px;
+}
+
+button {
+    margin-left: 8px;
+    border: 0;
+    background-color: white;
+}
+
+#task {
+    border: 0;
+    border-bottom: 1px solid lightgray;
+}
+
+select {
+    border: 0;
+    /*for firefox*/
+    -moz-appearance: none;
+    /*for chrome*/
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+/*for IE10*/
+
+select::-ms-expand {
+    display: none;
+}
+
+fieldset {
+    padding: 0 8px;
+}
+
+fieldset label {
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.checked {
+    box-shadow: inset 0px 0px 5px #ffff00, 0px 0px 2px #000000;
+    text-shadow: 2px 0px 3px rgb(0, 0, 0), -4px 0px 3px rgb(0, 0, 0);
+    font-weight: bold;
+    color: yellow;
+    text-shadow: black;
+    font-size: 1.4rem;
+}
+
+fieldset input {
+    display: none;
+}
+
+/***************************
+****** TASK - SECTION ******
+***************************/
+
+.task {
+    width: 100%;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+thead,
+tfoot,
+tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+thead {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 15px 50px 0 0;
+    padding: 30px 20px;
+    background-color: darkblue;
+    color: white;
+}
+
+tbody tr {
+    padding: 20px;
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+tfoot {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 0 0 15px 50px;
+    padding: 30px 20px;
+    background-color: darkblue;
+    color: white;
+}
+
+tr {
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/***************************
+***** FOOTER - SECTION *****
+***************************/
+
+.done thead, .done tfoot {
+    background-color: green;
+    color: white;
+}
+
+.done tbody {
+    background-color: rgb(0, 221, 0);
+}
+
+.done tbody tr {
+    background-color: rgba(128, 128, 128, 0.692)
+}
+/***************************
+***** FOOTER - SECTION *****
+***************************/
+
+footer {
+    position: fixed;
+    position: sticky;
+    top: 100%; 
+    background-color:rgb(0, 192, 0);
+    padding: 30px;
+    text-align: left;
+}
