@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="de" >
+  <head>
+        <base href = "https://lernplattform.wifi.at/">
+
+    <meta charset="UTF-8">
+
+            <title>WIFI Lernplattform | Startseite</title>
+
+        <meta name="keywords"
+              content="LMS,education,elearning,training">
+
+        <meta name="description"
+              content="Elearning Platform">
+    
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+
+    <meta name="format-detection"
+          content="telephone=no">
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+          name='viewport' />
+
+    <meta name="apple-mobile-web-app-capable"
+          content="yes">
+
+    <link rel="shortcut icon"
+          href="/assets/images/favicon.png"/>
+
+    
+    
+            <link rel="stylesheet"
+              type="text/css"
+              href="assets/pace-0.5.6/themes/pace-theme-flash.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/efront/css/icons.data.svg.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/animate-3.5.2/animate.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/selectize-0.12.4/css/selectize.bootstrap3.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/custombox-2.2.1/custombox.min.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/select2-4.0.1/css/select2.min.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/efront/sass/layout.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/efront/css/default.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/efront/css/custom-block.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/font-awesome-animation-0.0.10/font-awesome-animation.min.css" />
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="assets/jquery-ui-1.12.1-custom/jquery-ui.min.css" />
+
+    
+            <link rel="stylesheet"
+              type="text/css"
+              href="https://lernplattform.wifi.at/themes/css/14/ncid/1523366796" />
+    
+    <script>
+        var ef_loaded_language = 'de_DE.utf8';
+    </script>
+
+    <script type="text/javascript"
+            src = "assets/efront/js/i18n/de_DE.utf8.json?v=5.1.0"></script>
+
+            <script type="text/javascript"
+                src="assets/jquery-2.2.4/jquery-2.2.4.min.js"></script>
+
+        <script type="text/javascript"
+                src="assets/jquery-ui-1.12.1-custom/jquery-ui.min.js"></script>
+
+        <script type="text/javascript"
+                src="assets/i18next-2.0.20/i18next.min.js"></script>
+
+        <script type="text/javascript"
+                src="assets/pace-0.5.6/pace.js"></script>
+
+        <script type="text/javascript"
+                src="assets/stay_standalone.js"></script>
+
+        <script type="text/javascript"
+                src="assets/jquery-cookie-1.4.1/jquery.cookie.js"></script>
+
+        <script type="text/javascript"
+                src="assets/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript"
+                src="assets/bootbox-4.3.0/bootbox.min.js"></script>
+
+        <script type="text/javascript"
+                src="assets/select2-4.0.1/js/select2.full.js"></script>
+
+        <script type="text/javascript"
+                src="assets/selectize-0.12.4/js/standalone/selectize.js"></script>
+
+        <script type="text/javascript"
+                src="assets/efront/js/scripts.js"></script>
+        <script type="text/javascript"
+                src="assets/moment-2.13.0/moment-with-locales.js"></script>
+
+        <script type="text/javascript"
+                src="assets/custombox-2.2.1/custombox.min.js"></script>
+
+        <script type="text/javascript"
+                src="assets/jquery.easing-master/jquery.easing.min.js"></script>
+
+        <script type="text/javascript"
+                src="assets/efront/js/eFront.js"></script>
+
+        <script type="text/javascript"
+                src="assets/efront/js/avatars.js"></script>
+
+        <script type="text/javascript"
+                src="assets/efront/js/system-settings.js"></script>
+    
+        
+    <script>
+        var ef_settings = {
+          loaded_editor:'summernote',
+          math_library:'',
+        };
+
+            
+        $(function() {
+        
+            $serverLocation = 'https://lernplattform.wifi.at/';
+
+            window.paceOptions = {
+              "restartOnRequestAfter":10,
+              "ajax": {
+                "trackMethods": ['GET', 'POST']
+              }
+            };
+        });
+    </script>
+    
+        <script type="text/javascript"
+            src="https://lernplattform.wifi.at/themes/js/14/ncid/1523366796"></script>
+    	
+	  <script>
+        var http_host = 'lernplattform.wifi.at';
+        var debug_mode = '';
+        if (typeof($.cookie('support_pdf')) == 'undefined') {
+            $.fn.efront('checkPdf'); //creates a cookie
+        }
+    </script>
+
+
+    
+
+  </head>
+  <body>
+    <!-- UwS3EL8naZ8JUuasKeziacKa+JYMw -->
+                                      
+
+<script type="text/javascript" src="assets/efront/js/navbar/navbar.js"></script>
+
+<nav id="ef-navbar"
+     class="navbar navbar-inverse hidden-md-down">
+
+    <style>
+        .popover {
+            min-width: 200px
+        }
+    </style>
+
+    <div class="container">
+
+        <!-- Main Logo -->
+        <div class="navbar-header" id="ef-logo">
+
+            <a class="ef-navbar-logo navbar-brand"
+               href="https://lernplattform.wifi.at/start">
+                <img src="assets/images/designs/14/logo-efront-pro.png"
+                     title="WIFI Lernplattform"
+                     alt="WIFI Lernplattform" />
+                                <img class="small" src="assets/images/designs/14/logo-efront-pro-small.png"
+                     title="WIFI Lernplattform"
+                     alt="WIFI Lernplattform" />
+                            </a>
+
+            
+        </div>
+
+        <div class="navbar-collapse">
+
+            <!-- User Navigation Bar -->
+                                <ul id="ef-navigation" class="nav navbar-nav navbar-right pull-right">
+
+                        
+
+                        
+                        <!-- Points -->
+                        
+
+                        <!-- Shopping Cart -->
+                        <li class="hidden">
+                            <a class="dropdown-toggle" href='https://lernplattform.wifi.at/catalog/cart/1' title="Buchungsliste">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <span id="ef-cart-count">0</span>
+                            </a>
+                        </li>
+
+                        <!-- Inbox -->
+                        
+                        <!-- Communication -->
+                        
+            
+            <!-- Search -->
+            
+ 		</ul>
+      </div>
+
+    </div>
+
+    <div class="breadcrumb-x" >
+    <div class="container">
+
+        
+        
+
+        <div>
+                            
+                <ol class="breadcrumb visible-lg"><li class = 'active'><a href = 'https://lernplattform.wifi.at/start' title = 'Startseite'>Startseite</a></li></ol>
+                <ol class="breadcrumb visible-md"><li class = 'active'><a href = 'https://lernplattform.wifi.at/start' title = 'Startseite'>Startseite</a></li></ol>
+                <ol class="breadcrumb visible-sm"><li class = 'active'><a href = 'https://lernplattform.wifi.at/start' title = 'Startseite'>Startseite</a></li></ol>
+                <ol class="breadcrumb visible-xs"><li class = 'active'><a href = 'https://lernplattform.wifi.at/start' title = 'Startseite'>Startseite</a></li></ol>
+                    </div>
+    </div>
+</div>
+
+    <script>
+
+        $("div.breadcrumb-x").remove();
+
+    </script>
+
+</nav>
+
+<!-- Events -->
+<div id="navbarEventDetails" class="navbar-calendar-modal" data-editable="false" data-event-id="-1">
+    <button type="button" class="close" onclick="Custombox.close();">
+        <span>&times;</span><span class="sr-only">Schließen</span>
+    </button>
+    <h4 class="title" id="navbar-event-title">&nbsp;</h4>
+    <div class="text" id="navbar-event-data"></div>
+    <div class="btn-container">
+        <span id="navbarEventDetailsLinks" class="pull-left modal-links"><a href="javascript:void(0)" id="update-navbar-calendar-event">Aktualisieren</a> oder <a href="javascript:void(0)" id="delete-navbar-calendar-event">löschen</a> dieses Ereignis?</span>
+        <button class="modal-btn btn btn-default btn-sm" onclick="Custombox.close();">Schließen</button>
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-reply-all"></i>&ensp;In eigenen Kalender übernehmen&ensp;<span class="caret"></span></button>
+            <ul class="dropdown-menu pull-right" role="menu">
+                <li><a id="navbar-google-calendar" target="_blank" href="#">Google Calendar</a></li>
+                <li><a id="navbar-iCalendar" href="#">iCalendar / Outlook Calendar</a></li>
+                <li><a id="navbar-outlook-calendar" target="_blank" href="#">Outlook.com Calendar</a></li>
+                <li><a id="navbar-yahoo-calendar" target="_blank" href="#">Yahoo! Calendar</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="deleteNavbarEventConfirmation" class="navbar-calendar-modal">
+    <button type="button" class="close" onclick="Custombox.close();">
+        <span>&times;</span><span class="sr-only">Schließen</span>
+    </button>
+    <h4 class="title">Löschen des Ereignisses bestätigen</h4>
+    <div class="text">Das Ereignis kann nach dem Löschen nicht mehr wiederhergestellt werden. Trotzdem fortfahren?</div>
+    <div class="btn-container text-center">
+        <button class="modal-btn btn btn-danger btn-sm" id="delete-navbar-calendar-event-button">Ja</button>
+        <button class="modal-btn btn btn-default btn-sm" onclick="Custombox.close();">Nein</button>
+    </div>
+</div>
+
+<script type="text/javascript">window.ef_navbar();</script>
+<script>
+
+    $(document).ready(function(){
+        //ResizeHeader();
+        var searchIcon = $("#ef-search-bar").find(".fa-eye");
+        searchIcon.addClass("fa-search").removeClass("fa-eye");
+
+        searchIcon.click(function(){
+            $("#ef-navbar").find(".selectize-input").toggle(300);
+        });
+
+        //var navbar = $("#ef-navbar");
+        //navbar.find("a.dropdown-toggle").css("height", navbar.height() + 5 + "px");
+        $("a[href='/start']").addClass("active-view"); //$("a[href='/start']").css("background", "#66b340"); Benji: Buttons wurden immer Grün angezeigt, auch bei anderen Designs
+    });
+
+    //$(window).resize(function(){
+    //    ResizeHeader();
+    //});
+
+    //function ResizeHeader()
+    //{
+    //    var logoImage = $(".ef-navbar-logo img");
+    //    var searchIcon = $("#ef-search-bar").find(".fa-eye");
+
+    //    if($(window).width() < 450){
+    //        logoImage.attr("src", "assets/images/designs/14/logo-efront-pro-small.png");
+    //        logoImage.addClass("small");
+    //        searchIcon.css("opacity", 0);
+    //    }
+
+    //    else{
+    //        logoImage.attr("src", "assets/images/designs/14/logo-efront-pro.png");
+    //        logoImage.removeClass("small");
+    //        searchIcon.css("opacity", 1);
+    //    }
+    //}
+
+</script>
+    <script>
+
+        var navbarContainer = $("#ef-navbar").find(".container");
+        var navbarCollapse = $(".navbar-collapse");
+
+        if(""){
+            var phoneNumber = "+435909003059";
+            var phoneNumberLabel = "0590&nbsp;90&nbsp;03&nbsp;059";
+            var helpDesk = "Support";
+        }
+
+        else{
+            var phoneNumber = "+43800722424";
+            var phoneNumberLabel = "0800&nbsp;72&nbsp;24&nbsp;24";
+            var helpDesk = "Helpdesk";
+        }
+
+        $("<div id='hotline'><a href='tel:" + phoneNumber + "'><i class='fa fa-phone'></i>&nbsp;" + phoneNumberLabel + "</a></div>").prependTo(navbarContainer);
+        $("<a id='support' href='/helpdesk' class='additional-navbar-link'><i class='fa fa-question-circle'></i><span>&nbsp;" + helpDesk + "</span></a>").appendTo(navbarCollapse);
+        $("<a href='/start' class='additional-navbar-link'><i class='fa fa-lock'></i><span>&nbsp;Login</span></a>").appendTo(navbarCollapse);
+
+    </script>
+
+
+      
+              <div id="backgroundDiv" style="background-image: url('plugins/Customizing/assets/images/background_no_login_1.jpg');background-color: #ffffff;/*! background-attachment: fixed; */background-size: cover;background-position-y: 80px;background-repeat: repeat-y;padding-bottom: 45px;/*! position: relative; */position: fixed;width: 100%;height: 100%;top: 0;left: 0;"></div>
+      <div class="container">
+                        <script type="text/javascript" src="assets/efront/js/index.js"></script>
+<script type="text/javascript" src="./assets/efront/js/catalog/course_catalog.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+      
+
+  
+
+
+
+
+
+
+
+    
+                            
+                            
+                            
+        <div class="container" id="ef-index-page">
+            <div class="col-md-12">
+                
+              
+    <div  class = 'alert alert-warning fade in'>
+    <button type='button' class='close' data-dismiss='alert'>&times;</button>
+    Sie müssen Sich anmelden, um diese Seite anzeigen zu können
+    
+    </div>
+  
+    
+            </div>
+            <div class="col-md-3" style="display:none">
+                
+    
+                
+
+            </div>
+            <div class="col-md-9" style="display:none">
+                
+            
+                            
+    
+            </div>
+            <div class="col-md-12" >
+                
+                                        <div class="">
+  <div class="ef-block " id="ef-login-index">
+    
+    
+    <div class = "ef-block-content ">
+      
+    
+    
+    <form autocomplete="off"  action="https://lernplattform.wifi.at/start" method="post" name="login_form" id="login_form" onsubmit="try { var myValidator = validate_login_form; } catch(e) { return true; } var res = myValidator(this); if (!res) {$(this).find('input[type=&quot;submit&quot;]').data('failed-rule', 1);} else {$(this).find('input[type=&quot;submit&quot;]').data('failed-rule', 0);} return res;">
+                    <div class="one-column-login">
+                
+                    <div class="row ef-row hidden">
+        <div class="col-md-12"><input name="_qf__login_form" type="hidden" value="" /></div>
+    </div>
+
+    <div class="row ef-row">
+        <div class="col-md-12 form-group">
+            <div class="ef-form-element ef-form-element-text ">
+                <label for="login">Anmeldename</label>
+                <input class="form-control" placeholder="Anmeldename" name="login" type="text" />
+                <span class="help-block ef-error-block"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="row ef-row">
+        <div class="col-md-12 form-group">
+            <div class="ef-form-element ef-form-element-text ">
+                <label for="password">Passwort</label>
+                <input class="form-control" tabindex="0" placeholder="Passwort" name="password" type="password" />
+                <span class="help-block ef-error-block"></span>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row ef-row login-bottom">
+                    <div class="col-md-12 form-group">
+                <div class="ef-form-element">
+                    <!-- label for="submit_login"></label -->
+                    <input data-processing-msg="Anmelden..." class="btn btn-primary" name="submit_login" value="Anmelden" type="submit" />
+                </div>
+            </div>
+            </div>
+
+    <div class="row ef-row">
+        <div class="col-md-12"><a id="forgot-passwd" name="forgot" href = "https://lernplattform.wifi.at/start/op/password_change">Passwort vergessen</a></div>
+    </div>
+
+            </div>
+        
+        
+<script type="text/javascript">
+//<![CDATA[
+function validate_login_form(frm) {
+  var value = '';
+  var errFlag = errMsg = new Array();
+  var _qfGroups = {};
+  _qfMsg = '';
+
+  value = frm.elements['login'].value;
+  if (value == '' && !errFlag['login']) {
+    errFlag['login'] = true;
+    errMsg['login'] = 'Das Feld <i>Anmeldename</i> ist verpflichtend';
+    _qfMsg = _qfMsg + '\n - Das Feld <i>Anmeldename</i> ist verpflichtend';
+  }
+
+  value = frm.elements['password'].value;
+  if (value == '' && !errFlag['password']) {
+    errFlag['password'] = true;
+    errMsg['password'] = 'Das Feld <i>Passwort</i> ist verpflichtend';
+    _qfMsg = _qfMsg + '\n - Das Feld <i>Passwort</i> ist verpflichtend';
+  }
+
+  if (_qfMsg != '') {
+	$('input, textarea,select').each(function (i, s) {
+    	if ($(this).parents('.form-group').find('.ef-error-block').length) {    	
+	    	if (typeof (errFlag[$(s).attr('name')]) != 'undefined') {
+	    		$(this).parents('.form-group').addClass('has-error').find('.ef-error-block').show().html(errMsg[$(s).attr('name')]).show();
+	    		//$('body').scrollTo($(this).parents('.form-group').addClass('has-error').find('.ef-error-block'));
+	    		$('html, body').scrollTop($(this).parents('.form-group').addClass('has-error').find('.ef-error-block').offset().top-100);	    			    		
+	    	} else if (typeof($(s).attr('name')) != 'undefined') {
+	    		$(this).parents('.form-group').removeClass('has-error').find('.ef-error-block').hide().text('').hide()
+	    	}	
+    	}
+    });    _qfMsg = 'Invalid information entered.' + _qfMsg;
+    _qfMsg = _qfMsg + '\nPlease correct these fields.';
+    //alert(_qfMsg);
+    return false;
+  }
+  return true;
+}
+//]]>
+</script>
+    </form>
+
+
+
+    </div>
+    <div class = "ef-block-footer">
+                <span class="sign-slogan">
+            Haben Sie sich noch nicht registriert?
+            <a href="https://lernplattform.wifi.at/start/op/signup">
+                Registrieren Sie sich hier!
+            </a>
+        </span>
+    </div>
+  </div>
+</div>
+                        
+
+            </div>
+        </div>
+    
+
+<style type="text/css">
+    form[name='multi_factor_form'] div.form-group:nth-child(2) label.control-label { width: auto; }
+</style>
+
+<script type="text/javascript">
+    window.ef_index();
+
+    $("img").one("load", function() {
+
+    }).each(function() {
+        if(this.complete) $(this).load();
+    });
+</script>
+
+                </div>
+
+      
+              <iframe style = "display:none" name = "POPUP_FRAME" id = "ef-popup-frame" src = "javascript:''" >Sorry, but your browser needs to support iframes to see this</iframe>
+    
+        <script>
+          $(function() {
+            jQuery.fn.efront('init');
+            $.fn.efront.ef_date_format = 'DD.MM.YYYY';
+            $.fn.efront.ef_datetime_format = 'DD.MM.YYYY HH:mm';
+
+            if ($('.sortedTable').length) {
+            	                	$.fn.efront.sorted_table_limit = 100000;
+                            	$.fn.efront('get_cached_script', "assets/efront/js/ajax_sorted_table.js?v=5.1.0" )
+            }
+            if( "" ){
+                $.ajax({
+                    url: ""
+                });
+            }
+          });
+
+          $(function(){
+              $( ".container .content form label[for] input[type='checkbox']" ).click(function( e ){
+                  if( e.target === this ){
+                      $( this ).parents( "div.form-group" ).find( "input[name='" + $( this ).attr( "for" ) + "']", this ).trigger( "click" );
+                  }
+              });
+          });
+
+          $(function(){
+              $( "div.alert button.close" ).on("click", function( e ){
+                  e.stopPropagation();
+                  $parent = $( this ).off( "click" ).parent();
+                  $parent.stop().animate({
+                      opacity: 0, marginBottom: ( - $parent.outerHeight() + "px" )
+                  }, 250, "easeOutSine", function(){
+                      $( this ).remove();
+                  });
+              });
+          });
+
+          console.log("%cAttention!", "background-color:#f00;color:#ff0;font-size:16pt");
+          console.log('--------------------------------------------------------------------------------------------------------');
+          console.log('This tool is intended for use by developers and generally people with technical knowledge.');
+          console.log('DO NOT copy/paste any text that someone has given to you, because you risk the security of your account.');
+          console.log("\n\n");
+          console.log("Current Version: %s", '5.1.0');
+          console.log("\n\n");
+
+          ef_avatar();
+
+        </script>
+
+  </body>
+</html>
+
+    <script>
+
+        var backgroundImages = 1;
+
+        $(document).ready(function(){
+            var login = $("#ef-login-index");
+            login.parent().css("float", "right").css("max-width", "100%").children().css("max-width", "100%");
+            //$("body").css("background-image", "url(plugins/Customizing/assets/images/background" + (Math.floor(Math.random() * backgroundImages) + 1) +".jpg)");
+            $("<img id='slogan' style='max-width: 100%;' src='plugins/Customizing/assets/images/slogan.png'>").prependTo(login.parent());
+        });
+
+    </script>
+<div id="footer">
+    <div class="container">
+        <div id="copyRightText" style="float:left;">
+            &copy;WIFI Österreich. Alle Rechte vorbehalten.
+        </div>
+        <div style="float:right;">
+            <a href="http://www.wifi.at/offenlegung" target="_blank" style="margin-right:10px;">
+                Offenlegung
+            </a>
+            <a href="https://www.wko.at/" target="_blank">
+                <img src="plugins/Customizing/assets/images/wko.png">
+            </a>
+        </div>
+    </div>
+</div>
+<style>
+    @media(max-width: 450px){
+        #copyRightText{
+            display: none;
+        }
+    }
+
+    .ef-question-indicator .ef-question-indicator-warning {
+        background-color: #ec971f !important;
+        border: 2px solid #ec971f !important;
+    }
+</style>
+    <script>
+
+        $("<a id='guest' href='/guest'>Gastzugang</a>").appendTo($("#forgot-passwd").parent());
+
+    </script>
+    <script>
+
+        $(document).ready(function(){
+            toggleBackground(true, 1);
+        });
+
+        function toggleBackground(fadeOut, currentImage){
+            var backgroundDiv = $("#backgroundDiv");
+
+            if(fadeOut){
+
+                switch(currentImage){
+                    case 1: currentImage = 2; break;
+                    case 2: currentImage = 1; break;
+                }
+
+                backgroundDiv.fadeOut(5000, function(){
+                    backgroundDiv.css("background-image", "url('plugins/Customizing/assets/images/background_no_login_" + currentImage + ".jpg')");
+                    toggleBackground(false, currentImage);
+                });
+            }
+
+            else{
+                backgroundDiv.fadeIn(5000, function(){
+                    toggleBackground(true, currentImage);
+                });
+            }
+        }
+
+    </script>
+
+<script>$("#ef-login-index").find(".ef-block-footer").first().remove();</script>
