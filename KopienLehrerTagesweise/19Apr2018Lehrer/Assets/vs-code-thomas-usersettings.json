@@ -1,0 +1,14 @@
+{
+    "editor.fontSize": 24,
+    "editor.wordWrap": "on",
+    "editor.formatOnType": true,
+    "php.executablePath": "c:/wamp64/bin/php/php7.1.9/php.exe",
+    "php.validate.executablePath": "c:/wamp64/bin/php/php7.1.9/php.exe",
+    "extensions.ignoreRecommendations": true,
+    "window.zoomLevel": -1,
+    "git.ignoreMissingGitWarning": true,
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    "workbench.colorTheme": "Monokai",
+    "files.autoSave": "afterDelay"
+}
