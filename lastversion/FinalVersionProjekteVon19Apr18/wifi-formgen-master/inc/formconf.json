@@ -1,0 +1,87 @@
+{
+    "method": "post",
+    "action": "",
+    "id": "testForm",
+    "encType": "multipart/form-data",
+    "formFieldErrorClass": "form-error",
+    "tagAttributes": {
+        "class": "pure-form pure-form-stacked"
+    },
+    "fieldsets": [
+        {
+            "legend": "Stammdaten",
+            "tagAttributes": {
+                "class": "two-fields"
+            },
+            "fields": [
+                "anrede",
+                "vorname",
+                "nachname"
+            ]
+        },
+        {
+            "legend": "Newsletter lesen",
+            "fields": [
+                "newsletter",
+                "senden"
+            ]
+        }
+    ],
+    "fieldOrder": [
+        "anrede",
+        "nachname",
+        "vorname"
+    ],
+    "fields": [
+        {
+            "name": "vorname",
+            "type": "text",
+            "label": "Vorname",
+            "dataType": "name",
+            "id": "vorName",
+            "validationRules": "required|valid_name|min_len,3",
+            "filters": "trim|sanitize_string"
+        },
+        {
+            "name": "nachname",
+            "type": "text",
+            "label": "Nachname",
+            "dataType": "name",
+            "id": "nachName",
+            "validationRules": "required|valid_name|min_len,3",
+            "filters": "trim|sanitize_string"
+        },
+        {
+            "name": "newsletter",
+            "type": "checkbox",
+            "label": "Newsletter bestellen",
+            "dataType": "name",
+            "id": "nachName",
+            "value": 1,
+            "validationRules": "required|contains,1",
+            "filters": "trim|sanitize_string"
+        },
+        {
+            "name": "anrede",
+            "type": "radio",
+            "label": "Anrede",
+            "dataType": "whitelist",
+            "fieldsetClass": "radio-group",
+            "id": "anrede",
+            "values": {
+                "w": "Frau",
+                "m": "Herr"
+            },
+            "validationRules": "required|exact_len,1|contains,m w",
+            "filters": "trim"
+        },
+        {
+            "name": "senden",
+            "type": "submit",
+            "label": "Senden",
+            "dataType": "text",
+            "value": "Senden",
+            "id": "sendForm"
+        }
+    ]
+}
