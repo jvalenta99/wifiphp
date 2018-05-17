@@ -14,7 +14,8 @@ class CreateSportartTable extends Migration
     public function up()
     {
         Schema::create('sportart', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('sportart_ID');
+            $table->string('sportartName');
             $table->timestamps();
         });
     }

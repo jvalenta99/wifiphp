@@ -15,7 +15,7 @@ class CreateLaenderTable extends Migration
     {
         Schema::create('laender', function (Blueprint $table) {
             $table->increments('land_ID');
-            $table->string('landName')->nullable($value = false);
+            $table->string('landName');
             $table->string('landKurz')->nullable($value = false);
             $table->timestamps();
             $table->timestamp('created_at_jiri')->useCurrent();
