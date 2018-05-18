@@ -11,8 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('testbootstrap');
+/* Route::get('/', function () {
+    return view('home');
+}); */
+Route::get('/table', function () {
+    return view('layouttest');
 });
 
 Route::get('/login', function () {
@@ -23,4 +26,4 @@ Route::resource('laender', 'LandController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
