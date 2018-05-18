@@ -17,5 +17,21 @@ class UsersTableSeeder extends Seeder
             'email' => strtolower(str_random(6)).'@gmail.com',
             'password' => bcrypt('test@123')
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'user1',
+            'vorname' => str_random(6),
+            'email' => 'user1@gmail.com',
+            'password' => bcrypt('test@123')
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'user2',
+            'vorname' => str_random(6),
+            'email' => 'user2@gmail.com',
+            'password' => bcrypt('test@123')
+        ]);
+
+
     }
 }

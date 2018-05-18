@@ -16,7 +16,7 @@ class CreateNachrichtenTable extends Migration
     public function up()
     {
         Schema::create('nachrichten', function (Blueprint $table) {
-            $table->increments('nachr_PK');
+            $table->increments('nachr_ID');
             $table->string('nachrText');
             $table->unsignedInteger('nachrFromBenut_FK')->nullable($value = true);
             $table->unsignedInteger('nachrVeran_FK')->nullable($value = true);

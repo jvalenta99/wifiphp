@@ -12,12 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('testbootstrap');
 });
 
 Route::get('/login', function () {
     return view('welcome');
 });
+
+Route::resource('laender', 'LandController');
 
 Auth::routes();
 
