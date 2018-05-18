@@ -13,8 +13,13 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UsersTableSeeder::class);
         $this->call(UsersTableSeeder::class);
-
-
-        
+        $this->call(SportartsTableSeeder::class);
+        $this->call(LaenderTableSeeder::class);
+        $this->call(MitspielerTableSeeder::class);
+        $this->call(NachrichtenTableSeeder::class);
+        $this->call(SportveranstaltungenTableSeeder::class);
+        $this->call(StaedteTableSeeder::class);
+        $this->call(Status_spielerTableSeeder::class);
+                
     }
 }

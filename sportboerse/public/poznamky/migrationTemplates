@@ -23,3 +23,8 @@ $table->collation = 'utf8_unicode_ci';
 php artisan make:migration create_TableNAME_table --create=TableNAME
 php artisan make:migration 
 php artisan migrate:fresh --seed
+
+Seeding
+php artisan make:seeder UsersTableSeeder
+
+a nakonec nove seed
