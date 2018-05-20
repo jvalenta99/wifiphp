@@ -12,7 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- 
     <link href="{{ asset('css/sportboerse.css') }}" rel="stylesheet">
+        von Thomas
+     -->
+
 </head>
 <body>
     <div id="app">

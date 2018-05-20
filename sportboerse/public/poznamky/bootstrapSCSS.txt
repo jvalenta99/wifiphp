@@ -1,0 +1,15 @@
+https://laravel.com/docs/5.6/mix
+
+install cmder.exe, run as admin
+1.Before triggering Mix, you must first ensure that Node.js and NPM are installed on your machine.
+    node -v
+    npm -v
+
+2.check webpack.mix.js in root dir, there should be:
+
+mix.js('resources/assets/js/app.js', 'public/js')
+   .sass('resources/assets/sass/app.scss', 'public/css');
+
+3. open cmder.exe as admin, traverse to project root (sportboerse) and run npm install in command line
+it will use configuration file package.json
+
