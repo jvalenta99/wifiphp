@@ -1,3 +1,0 @@
-php artisan make:controller userController
-php artisan make:controller PhotoController --resource
-php artisan route:list .... show all routes

@@ -1,3 +1,5 @@
+https://phraseapp.com/blog/posts/laravel-i18n-frontend-best-practices/
+
 https://quickadminpanel.com/blog/10-best-laravel-packages-for-multi-language-projects/
 
 https://laravel.com/docs/5.6/localization

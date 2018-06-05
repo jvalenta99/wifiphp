@@ -20,7 +20,8 @@
 </head>
 <body>
     <div id="app">
-        @include('inc.navbar')
+        
+        @include('inc.navbarwelcome')
 
         @yield('content')
     </div>

@@ -1,0 +1,1 @@
+@lang("welcomepage.registrieren")

@@ -1,20 +1,11 @@
-@extends('layouts.start')
+@extends('layouts.app')
 
 @section('content')
-<div class="jumbotron">
-        <div class="container">
-        <h1 class="display-3">@lang("welcomepage.jumbotitle")</h1>
-          <p>@lang("welcomepage.jumboparagraph") </p>
-          <p><a class="btn btn-primary btn-lg" href="#" role="button">@lang("welcomepage.registrieren") &raquo;</a></p>
-        </div>
- </div>
-
-
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading text-center">@lang("welcomepage.sportveranstaltungen")</div>
+                <div class="panel-heading text-center">Sportveranstaltungen suchen</div>
 
                 <div class="panel-body text-center">
                     

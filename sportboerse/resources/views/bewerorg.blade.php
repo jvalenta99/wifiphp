@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading text-center">Startseite</div>
+                <div class="panel-heading text-center">meine Bewerbungen organisieren</div>
 
                 <div class="panel-body text-center">
                     @if (session('status'))
@@ -15,11 +15,13 @@
                     @endif
 
                     
-                    <a href='/veransuch'>Sportveranstaltung suchen</a>
+                    <a href='/bewerdet'>25.6.2018 von 17:00 bis 19:00; Österreich; Wien; Ortdetail: ogugasse 15, 1220 wien</a>
                     <br>
-                    <a href='/bewerorg'>meine Bewerbungen bearbeiten</a>
+                    <a href='/bewerdet'>26.6.2018 von 18:00 bis 20:00; Österreich; Wien; Ortdetail: ogugasse 15, 1220 wien</a>
                     <br>
-                    <a href='/meineveranorg'>meine Sportveranstaltungen organisieren</a>
+                    
+                    <br>
+                    <br>
                     <br>
                     
                 </div>
