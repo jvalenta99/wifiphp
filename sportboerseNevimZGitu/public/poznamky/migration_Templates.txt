@@ -1,0 +1,30 @@
+$table->increments('id');
+$table->string('name');
+$table->integer('anzahl');
+$table->dateTime('created_at');
+
+
+$table->unsignedInteger('user_FK'); pokud chci udelat FK
+$table->timestamps();
+
+kdyz muze byt prazdne:
+->nullable($value = true);
+
+kdyz musi neco obsahovat:
+->nullable($value = false);
+
+->default('Some title');
+
+$table->engine = 'InnoDB';
+$table->charset = 'utf8';
+$table->collation = 'utf8_unicode_ci';
+
+
+php artisan make:migration create_TableNAME_table --create=TableNAME
+php artisan make:migration 
+php artisan migrate:fresh --seed
+
+Seeding
+php artisan make:seeder UsersTableSeeder
+
+a nakonec nove seed

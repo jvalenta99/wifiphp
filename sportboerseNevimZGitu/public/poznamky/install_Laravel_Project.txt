@@ -1,0 +1,7 @@
+dopsat!!
+
+1.install composer
+
+2.install project to http root
+
+3.set virtual host ..->virtualHostSetup
