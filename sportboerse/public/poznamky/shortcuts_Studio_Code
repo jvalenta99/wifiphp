@@ -5,4 +5,5 @@ move current line up DOWN ..... alt + UP/DOWN ARROW
 copy line up/down  ...  alt + shift + up/down
 save all files ... strg+K, danach S
 close all opened tabs ... strg+K, danach W
+umschalten auf zeilenumbruch ...alt+Z 
 

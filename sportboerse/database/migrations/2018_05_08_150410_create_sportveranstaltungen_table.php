@@ -20,7 +20,11 @@ class CreateSportveranstaltungenTable extends Migration
             $table->unsignedInteger('veranLand_FK');
             $table->unsignedInteger('veranStadt_FK');
             $table->unsignedInteger('veranSportart_FK');
-            $table->unsignedInteger('veranVeranstalter_FK');
+            $table->unsignedInteger('veranOrganisator_FK');
+            $table->foreign('veranLand_FK')->references('land_ID')->on('laender');
+            $table->foreign('veranStadt_FK')->references('stadt_ID')->on('staedte');
+            $table->foreign('veranSportart_FK')->references('sportarts_ID')->on('sportarts');
+            $table->foreign('veranOrganisator_FK')->references('id')->on('users');
             $table->integer('veranMinstaerke');
             $table->integer('veranMaxstaerke');
             $table->date('veranBewerbungBis');

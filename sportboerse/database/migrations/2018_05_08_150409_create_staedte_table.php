@@ -16,6 +16,8 @@ class CreateStaedteTable extends Migration
         Schema::create('staedte', function (Blueprint $table) {
             $table->increments('stadt_ID');
             $table->string('stadtName');
+            $table->unsignedInteger('land_FK');
+            $table->foreign('land_FK')->references('land_ID')->on('laender');
             $table->timestamps();
         });
     }

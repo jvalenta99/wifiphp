@@ -22,6 +22,8 @@ class CreateNachrichtenTable extends Migration
             $table->unsignedInteger('nachrVeran_FK')->nullable($value = true);
             $table->unsignedInteger('nachrToBenut_FK')->nullable($value = true);
             $table->foreign('nachrToBenut_FK')->references('id')->on('users');
+            $table->foreign('nachrVeran_FK')->references('veran_ID')->on('sportveranstaltungen');
+            $table->foreign('nachrFromBenut_FK')->references('id')->on('users');
             $table->timestamps();
         });
     }

@@ -11,6 +11,19 @@ class StaedteTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('staedte')->insert([
+            'stadtName' => 'Wien 1.Bezirk',
+            'land_FK' => '1',
+        ]);
+
+        DB::table('staedte')->insert([
+            'stadtName' => 'Wien 2.Bezirk',
+            'land_FK' => '1',
+        ]);
+
+        DB::table('staedte')->insert([
+            'stadtName' => 'Wien 3.Bezirk',
+            'land_FK' => '1',
+        ]);
     }
 }

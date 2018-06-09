@@ -21,6 +21,11 @@ return [
      'login' => 'login',
      'logout' => 'logout',
      'register' => 'register',
+     'loginheader' => 'Login',
+     'emaillabel' => 'E-Mail Address',
+     'passwordlabel' => 'Password',
+     'rememberme' => 'Remember me',
+
 
    
 ];

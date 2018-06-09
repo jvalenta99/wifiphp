@@ -22,6 +22,8 @@ $table->collation = 'utf8_unicode_ci';
 
 php artisan make:migration create_TableNAME_table --create=TableNAME
 php artisan make:migration 
+
+alles neu, alte daten löschen, alles neu anlegen
 php artisan migrate:fresh --seed
 
 Seeding

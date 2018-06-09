@@ -15,8 +15,15 @@ return [
     'failed' => 'Diese Kombination aus Zugangsdaten wurde nicht in unserer Datenbank gefunden.',
     'throttle' => 'Zu viele Loginversuche. Versuchen Sie es bitte in :seconds Sekunden nochmal.',
 
+    //Jiri
     'login' => 'einloggen',
     'logout' => 'ausloggen',
     'register' => 'registrieren',
+    'loginheader' => 'Login',
+    'emaillabel' => 'E-Mail-Adresse',
+    'passwordlabel' => 'Passwort',
+    'rememberme' => 'Schpeichere mich',
+    
+
     
 ];
