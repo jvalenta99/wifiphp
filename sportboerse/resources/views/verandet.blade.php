@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+@ php(dd($detVeran->veranAufschrift))
+
+<h4>{{ $detVeran->veranAufschrift }}</h4>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

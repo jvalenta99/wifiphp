@@ -13,4 +13,9 @@ class Land extends Model
     protected $table = 'laender';
     protected $primaryKey = 'land_ID';
 
+    protected $fillable = [
+        'landName',
+        'landKurz',
+    ];
+
 }

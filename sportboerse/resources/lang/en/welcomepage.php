@@ -4,7 +4,7 @@
             "registrieren"=>"register",
             "sportveranstaltungen"=>"Sporting events near to your place",
             "listeheader"=>"find sport competitions near around",
-            ""=>"",
+            "viewdetails"=>"View details",
             ""=>"",
 
 

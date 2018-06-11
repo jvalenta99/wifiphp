@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Sportveranstaltung;
 
 class VerandetController extends Controller
 {
@@ -45,7 +46,13 @@ class VerandetController extends Controller
      */
     public function show($id)
     {
-        //
+       // Über das Model Task werden alle Datensätze sortiert ausgelesen
+       $detVeran = Sportveranstaltung::orderBy('veranVon', 'desc')->where('veran_ID', $id)->firstOrFail();
+        
+       // Wir geben $allTasks in einem Array an die View weiter.
+       return view('verandet', [
+           'detVeran' => $detVeran
+       ]);
     }
 
     /**

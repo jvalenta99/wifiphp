@@ -21,7 +21,11 @@ Route::get('/', 'WelcomeController@index');
 Route::get('/veransuch', 'VeransuchController@index');
 Route::get('/bewerorg', 'BewerorgController@index');
 Route::get('/bewerdet', 'BewerdetController@index');
+
 Route::get('/verandet', 'VerandetController@index');
+Route::get('/verandet/{id}', 'VerandetController@show');
+
+
 Route::get('/meineveranorg', 'MeineveranorgController@index');
 Route::get('/meineverandet', 'MeineverandetController@index');
   

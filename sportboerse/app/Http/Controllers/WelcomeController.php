@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Sportveranstaltung;
 
 class WelcomeController extends Controller
 {
@@ -20,6 +21,14 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+        $allVeran = Sportveranstaltung::orderBy('created_at', 'desc')->get();
+        
+        // Wir geben $allTasks in einem Array an die View weiter.
+        return view('welcome', [
+            'allVeran' => $allVeran
+        ]);
+       
+       
         return view('welcome');
     }
 

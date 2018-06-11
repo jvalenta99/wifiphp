@@ -15,6 +15,8 @@ class CreateSportveranstaltungenTable extends Migration
     {
         Schema::create('sportveranstaltungen', function (Blueprint $table) {
             $table->increments('veran_ID');
+            $table->string('veranAufschrift');
+            $table->string('veranDetailtext');
             $table->dateTime('veranVon');
             $table->dateTime('veranTo');
             $table->unsignedInteger('veranLand_FK');

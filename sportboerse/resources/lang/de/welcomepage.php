@@ -4,8 +4,12 @@
             "registrieren"=>"registrieren",
             "sportveranstaltungen"=>"Sportveranstaltungen in deiner nähe",
             "listeheader"=>"Finde Sportmöglichkeiten in deiner nähe",
+            "viewdetails"=>"Detail ansehen",
             ""=>"",
             ""=>"",
-
+            ""=>"",
+            ""=>"",
+            ""=>"",
+            ""=>"",
 
 ];
