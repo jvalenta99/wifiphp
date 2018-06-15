@@ -25,7 +25,7 @@
 
         @yield('content')
     </div>
-
+         @include('inc.footerwelcome')
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

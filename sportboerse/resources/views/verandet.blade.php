@@ -1,44 +1,34 @@
-@extends('layouts.app')
+@extends('layouts.start')
 
 @section('content')
 
-
+<!--
 @ php(dd($detVeran->veranAufschrift))
-
-<h4>{{ $detVeran->veranAufschrift }}</h4>
+-->
+<div class="container"> 
+    <div class="card" >
+        <div class="card-header text-center">
+                <h2>{{ $detVeran->veranAufschrift }}</h2>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center">{{ $detVeran->veranDetailtext }} </li>
+            <li class="list-group-item"><b>@lang('welcomepage.sportart') :</b> {{ $detVeran->sportart->sportartsName }}</li>
+            <li class="list-group-item"><b>@lang('welcomepage.am') </b>{{ date('d.m.Y', strtotime($detVeran->veranVon)) }} <b>@lang('welcomepage.von')</b> {{ date('H:i', strtotime($detVeran->veranVon)) }} <b>@lang('welcomepage.bis')</b> {{ date('H:i', strtotime($detVeran->veranTo)) }}</li>
+            <li class="list-group-item">
+                <b> @lang('welcomepage.adresse'): </b>{{ $detVeran->veranAdresse }} <br>
+                @lang('welcomepage.in') {{ $detVeran->Stadt->stadtName }}, {{ $detVeran->Land->landName }}
+            </li>
+          <li class="list-group-item"><b>@lang('welcomepage.spielstärke')(1-10): </b>{{ $detVeran->veranMinstaerke }} @lang('welcomepage.bis') {{ $detVeran->veranMaxstaerke }} </li>
+          <li class="list-group-item"><b> @lang('welcomepage.organisator'): </b>{{$detVeran->organisator->name}} </li>
+          <li class="list-group-item">Vestibulum at</li>
+          <li class="list-group-item">Vestibulum at </li>
+        </ul>
+      
+    </div>
+</div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading text-center">Veranstaltungsdetail</div>
-
-                <div class="panel-body text-center">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <form action="/veransuch" method="get">
-                        <div class="form-group">
-                          <label for="exampleInputEmail1">Bezeichnung</label>
-                          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Bezeichnung">
-                          <small id="emailHelp" class="form-text text-muted">bla bla bemerkung</small>
-                        </div>
-                        <div class="form-group">
-                          <label for="exampleInputPassword1">Detailtext</label>
-                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Detailtext">
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">speichern</button>
-                      </form>
-                    
-                    <br>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+    <h3>Es sind nur noch 3 Plätze frei!</h3>
+    <p>   Um Teilzunehmen, muss du registriert und eingelogt sein. Registrieren link->...</p>
 </div>
 @endsection

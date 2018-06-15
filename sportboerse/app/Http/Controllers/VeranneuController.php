@@ -3,18 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Sportveranstaltung;
 
-class VerandetController extends Controller
+class VeranneuController extends Controller
 {
-    
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth');
         $this->middleware('language');
+
     }
-    
-    
+
+
+
     /**
      * Display a listing of the resource.
      *
@@ -22,7 +28,7 @@ class VerandetController extends Controller
      */
     public function index()
     {
-        return view('verandet');
+        return view('veranneu');
     }
 
     /**
@@ -54,13 +60,7 @@ class VerandetController extends Controller
      */
     public function show($id)
     {
-       // Über das Model Task werden alle Datensätze sortiert ausgelesen
-       $detVeran = Sportveranstaltung::orderBy('veranVon', 'desc')->where('veran_ID', $id)->firstOrFail();
-        
-       // Wir geben $allTasks in einem Array an die View weiter.
-       return view('verandet', [
-           'detVeran' => $detVeran
-       ]);
+        //
     }
 
     /**

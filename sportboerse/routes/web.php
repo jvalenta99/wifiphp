@@ -25,6 +25,8 @@ Route::get('/bewerdet', 'BewerdetController@index');
 Route::get('/verandet', 'VerandetController@index');
 Route::get('/verandet/{id}', 'VerandetController@show');
 
+Route::get('/veranneu', 'VeranneuController@index');
+
 
 Route::get('/meineveranorg', 'MeineveranorgController@index');
 Route::get('/meineverandet', 'MeineverandetController@index');
