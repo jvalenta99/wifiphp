@@ -3,16 +3,13 @@
 @section('content')
 <h1>neue Sportveranstaltung anlegen</h1>
 
-<form>
+<form action="">
         <div class="form-group">
                 <label for="land">Select list:</label>
                 <select class="form-control" id="land">
-                  
-                  
-                  <option value=1>1</option>
-                  <option value=2>2</option>
-                  <option value =3>3</option>
-                  <option value =4>4</option>
+                  @foreach ($allLand as $land)
+                    <option value={{ $land->land_ID }}>{{ $land->landName }}
+                  @endforeach   
                 </select>
               </div>
         <div class="form-group">

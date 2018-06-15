@@ -38,7 +38,12 @@ class VeranneuController extends Controller
      */
     public function create()
     {
-        //
+        $allLand = Land::orderBy('landName', 'asc')->get();
+        
+        return view('veranneu', [
+            'allLand' => $allLand
+        ]);
+       
     }
 
     /**

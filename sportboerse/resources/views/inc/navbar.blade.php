@@ -28,20 +28,9 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
-                    <li>
-                        <form class="form-inline" action="{{ URL::route('language-chooser')}}" method = "post">
-                                {{csrf_field()}}
-                            <select name="locale" >
-                                <option value="en">English</option>
-                                <option value="de">German</option>
-                                <option value="cs">Tschechisch</option>
-                            </select>
-                            
-                            <button type="submit" class="btn btn-primary" value="Choose">Choose</button>
-                        
-                        </form>
-
-                    </li>
+                <li><a href="/language/de">Deutsch</a></li>
+                <li><a href="/language/en">English</a></li>
+                <li class="text-primary"><a href="#">|</a></li>
                 
                 @guest
                     <li><a href="{{ route('login') }}">Login</a></li>
