@@ -4,23 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class VeranneuController extends Controller
+class TestController extends Controller
 {
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('language');
-
-    }
-
-
-
     /**
      * Display a listing of the resource.
      *
@@ -28,7 +13,8 @@ class VeranneuController extends Controller
      */
     public function index()
     {
-        return view('veranneu');
+        return view('test');
+        //
     }
 
     /**
@@ -38,12 +24,7 @@ class VeranneuController extends Controller
      */
     public function create()
     {
-        $allLand = Land::orderBy('landName', 'asc')->get();
-        
-        return view('veranneu', [
-            'allLand' => $allLand
-        ]);
-       
+        //
     }
 
     /**

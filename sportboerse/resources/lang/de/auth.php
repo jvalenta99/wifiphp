@@ -22,7 +22,9 @@ return [
     'loginheader' => 'Login',
     'emaillabel' => 'E-Mail-Adresse',
     'passwordlabel' => 'Passwort',
-    'rememberme' => 'Schpeichere mich',
+    'rememberme' => 'Speichere mich',
+    'passwortvergessen?' => 'Hast du dein Passwort vergessen?',
+
     
 
     

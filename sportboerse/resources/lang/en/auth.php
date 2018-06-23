@@ -25,6 +25,7 @@ return [
      'emaillabel' => 'E-Mail Address',
      'passwordlabel' => 'Password',
      'rememberme' => 'Remember me',
+     'passwortvergessen?' => 'Forgott Your Password?',
 
 
    

@@ -1,3 +1,11 @@
 php artisan make:controller UserController
 php artisan make:controller PhotoController --resource
+php artisan make:controller PhotoController --resource --model=Photo
 php artisan route:list .... show all routes
+
+Route::resource('laender', 'LandController'); create all routes
+in Controller:
+return redirect()->route('routeName',$objectName->ID); weiterleitung auf route
+
+echo request: return dd($request);
+

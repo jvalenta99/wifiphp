@@ -1,1 +1,3 @@
 php artisan route:list .... show all routes
+
+Route::resource('laender', 'LandController'); udela vsechny routes pro crud

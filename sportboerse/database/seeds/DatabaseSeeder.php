@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
         $this->call(MitspielerTableSeeder::class);
         $this->call(NachrichtenTableSeeder::class);
         $this->call(SportveranstaltungenTableSeeder::class);
-                
+        $this->call(Test2TableSeeder::class);
+               
+        
     }
 }

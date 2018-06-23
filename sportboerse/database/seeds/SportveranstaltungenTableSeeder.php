@@ -12,10 +12,10 @@ class SportveranstaltungenTableSeeder extends Seeder
     public function run()
     {
         DB::table('sportveranstaltungen')->insert([
-            'veranAufschrift' => 'Kleine Fussballrunde',
+            'veranAufschrift' => '1Kleine Fussballrunde',
             'veranDetailtext' => 'Es wird super,Es wird super,Es wird super,Es wird super,',
             'veranVon' => '1963-04-20 00:00:00',
-            'veranTo' => '1963-04-20 00:00:00',
+            'veranBis' => '1963-04-20 00:00:00',
             'veranLand_FK' => '1',
             'veranStadt_FK' => '1',
             'veranSportart_FK' => '1',
@@ -27,10 +27,10 @@ class SportveranstaltungenTableSeeder extends Seeder
         ]);
 
         DB::table('sportveranstaltungen')->insert([
-            'veranAufschrift' => 'Kleine Fussballrunde',
+            'veranAufschrift' => '2Kleine Fussballrunde',
             'veranDetailtext' => 'Es wird super,Es wird super,Es wird super,Es wird super,',
             'veranVon' => '1964-04-20 00:00:00',
-            'veranTo' => '1964-04-20 00:00:00',
+            'veranBis' => '1964-04-20 00:00:00',
             'veranLand_FK' => '1',
             'veranStadt_FK' => '1',
             'veranSportart_FK' => '1',
@@ -42,10 +42,10 @@ class SportveranstaltungenTableSeeder extends Seeder
         ]);
 
         DB::table('sportveranstaltungen')->insert([
-            'veranAufschrift' => 'Kleine Fussballrunde',
+            'veranAufschrift' => '3Kleine Fussballrunde',
             'veranDetailtext' => 'Es wird super,Es wird super,Es wird super,Es wird super,',
             'veranVon' => '1965-04-20 00:00:00',
-            'veranTo' => '1965-04-20 00:00:00',
+            'veranBis' => '1965-04-20 00:00:00',
             'veranLand_FK' => '1',
             'veranStadt_FK' => '1',
             'veranSportart_FK' => '1',
@@ -57,10 +57,10 @@ class SportveranstaltungenTableSeeder extends Seeder
         ]);
 
         DB::table('sportveranstaltungen')->insert([
-            'veranAufschrift' => 'Kleine Fussballrunde',
+            'veranAufschrift' => '4Kleine Fussballrunde',
             'veranDetailtext' => 'Es wird super,Es wird super,Es wird super,Es wird super,',
             'veranVon' => '1966-04-20 00:00:00',
-            'veranTo' => '1966-04-20 00:00:00',
+            'veranBis' => '1966-04-20 00:00:00',
             'veranLand_FK' => '1',
             'veranStadt_FK' => '1',
             'veranSportart_FK' => '1',

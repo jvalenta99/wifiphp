@@ -25,7 +25,7 @@ Route::get('/bewerdet', 'BewerdetController@index');
 Route::get('/verandet', 'VerandetController@index');
 Route::get('/verandet/{id}', 'VerandetController@show');
 
-Route::get('/veranneu', 'VeranneuController@index');
+//Route::get('/veranneu', 'VeranneuController@create');
 
 
 Route::get('/meineveranorg', 'MeineveranorgController@index');
@@ -46,6 +46,10 @@ Route::get('/home1', function () {
 });
 
 Route::resource('laender', 'LandController');
+Route::resource('sportveranstaltung', 'SportveranstaltungController');
+
+//Route::resource('test', 'TestController');
+Route::resource('test2', 'Test2Controller');
 
 Route::post('/language', array(
     'before' => 'csrf',
@@ -59,3 +63,7 @@ Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get('/test', 'TestController@index')->name('test');
+
+
