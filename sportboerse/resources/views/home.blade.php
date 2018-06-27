@@ -6,7 +6,7 @@
     <div class="card">
         <ul class="list-group ">
             <li class="list-group-item text-center">
-                <a href="/veransuch" class="btn btn-primary" role="button">Sportveranstaltung suchen</a>
+                <a href="{{ route('sportveranstaltung.index') }}" class="btn btn-primary" role="button">Sportveranstaltung suchen</a>
             </li>
             <li class="list-group-item text-center">
                 <a href="/bewerorg" class="btn btn-warning" role="button">meine Bewerbungen bearbeiten</a>

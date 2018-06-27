@@ -8,9 +8,14 @@
                     <div class="container">
                         <h3 class="lead">Finde eine Sportveranstaltung</h3>
                         <p class="">Entdecke lokale Sportveranstaltungen mit deinem Lieblinssport</p>
-                        <p class="lead">
+                        
+                        @if (Auth::check())
+        
+                        @else
+                            <p class="lead">
                             <a class="btn btn-primary btn-lg" href="#" role="button">Registrieren</a>
-                        </p>
+                            </p>
+                        @endif
                     </div>
                 </div>
                 <div class="col-sm-6 p-5">

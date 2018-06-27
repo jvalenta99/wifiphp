@@ -22,5 +22,11 @@ class Status_spielerTableSeeder extends Seeder
         DB::table('status_spieler')->insert([
             'statusSpName' => 'abgelehnt'
         ]);
+
+        DB::table('status_spieler')->insert([
+            'statusSpName' => 'angesucht'
+        ]);
+
+
     }
 }

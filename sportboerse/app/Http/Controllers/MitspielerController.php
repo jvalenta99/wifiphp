@@ -3,18 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Sportveranstaltung;
+use App\Mitspieler;
 use Illuminate\Support\Facades\Auth;
 
-class WelcomeController extends Controller
+class MitspielerController extends Controller
 {
-
-    public function __construct()
-    {
-        //$this->middleware('auth');
-        $this->middleware('language');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -22,20 +15,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        
-        if(Auth::check()){
-            return redirect()->route('home');
-        }
-        
-        $allVeran = Sportveranstaltung::orderBy('created_at', 'desc')->get();
-        
-        // Wir geben $allTasks in einem Array an die View weiter.
-        return view('welcome', [
-            'allVeran' => $allVeran
-        ]);
-       
-       
-        return view('welcome');
+        //
     }
 
     /**
@@ -56,7 +36,18 @@ class WelcomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //return dd($request);
+        //return "ahoj teilnehmer";
+        $mitspieler = new Mitspieler;
+
+        $mitspieler->benut_FK = Auth::id();
+        $mitspieler->veran_FK = $request->veran_FK;
+        $mitspieler->status_FK = $request->status_FK;
+        $mitspieler->bewertung = "5";
+        
+        $mitspieler->save();
+
+        return dd("saved");
     }
 
     /**

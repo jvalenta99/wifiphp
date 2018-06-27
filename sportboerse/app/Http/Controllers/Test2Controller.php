@@ -42,6 +42,8 @@ class Test2Controller extends Controller
         //return dd($result);
         $this->validate($request, array(
             'text1'=>'required|min:2|max:5',
+            'datumCas'=>'required|date|after:tomorrow|before:2025-01-01',
+
         ));
         
         // speichern die daten

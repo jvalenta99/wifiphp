@@ -34,7 +34,14 @@ class SportveranstaltungController extends Controller
      */
     public function index()
     {
-        return view('veranneu');
+        $allVeran = Sportveranstaltung::orderBy('created_at', 'desc')->get();
+        
+        // Wir geben $allTasks in einem Array an die View weiter.
+        return view('sportveranstaltung.suchen', [
+            'allVeran' => $allVeran
+        ]);
+
+        //return view('sportveranstaltung.suchen');
     }
 
     /**
@@ -65,9 +72,22 @@ class SportveranstaltungController extends Controller
      */
     public function store(Request $request)
     {
-        return dd(Auth::id());
+        //return dd(Auth::id());
         //$id = Auth::id();
         //validate data
+
+
+        
+            $this->validate($request, array(
+                'veranAufschrift'=>'required|min:2|max:30',
+                'veranDetailtext'=>'required|min:2|max:255',
+                'veranVon' => 'required|date|after:tomorrow|before:2025-01-01',
+                'veranBis' => 'required|date|after:tomorrow|before:2025-01-01',
+                'veranMinstaerke'=>'required|integer|between:1,10',
+                'veranMaxstaerke'=>'required|integer|between:1,10',
+                'veranAdresse'=>'required|min:2|max:255',
+
+            ));
 
         //store data
             $Sportveranstaltung = new Sportveranstaltung;
@@ -81,6 +101,7 @@ class SportveranstaltungController extends Controller
             $Sportveranstaltung->veranOrganisator_FK = Auth::id();
             $Sportveranstaltung->veranMinstaerke = $request->veranMinstaerke;
             $Sportveranstaltung->veranMaxstaerke = $request->veranMaxstaerke;
+            $Sportveranstaltung->veranAdresse = $request->veranAdresse;
             
             //$Sportveranstaltung->datumCas = $request->datumCas;
             $Sportveranstaltung->save();

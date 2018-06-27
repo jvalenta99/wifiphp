@@ -17,7 +17,17 @@
 
 
 // Route::get('/', 'HomeController@index');//home view
+
 Route::get('/', 'WelcomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('laender', 'LandController');
+Route::resource('sportveranstaltung', 'SportveranstaltungController');
+Route::resource('mitspieler', 'MitspielerController');
+
+
+
+
 Route::get('/veransuch', 'VeransuchController@index');
 Route::get('/bewerorg', 'BewerorgController@index');
 Route::get('/bewerdet', 'BewerdetController@index');
@@ -45,8 +55,7 @@ Route::get('/home1', function () {
     return view('home1');
 });
 
-Route::resource('laender', 'LandController');
-Route::resource('sportveranstaltung', 'SportveranstaltungController');
+
 
 //Route::resource('test', 'TestController');
 Route::resource('test2', 'Test2Controller');
@@ -62,7 +71,7 @@ Route::get('/language/{lang}','LanguageController@getChooser');
 Auth::routes();
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 //Route::get('/test', 'TestController@index')->name('test');
 
