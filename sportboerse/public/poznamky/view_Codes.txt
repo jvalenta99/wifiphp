@@ -1,0 +1,8 @@
+Troubleshooting
+show data sent from controller
+
+{{ dd(get_defined_vars()) }}
+
+nur das wichtigste:
+{{ dd(get_defined_vars()['__data']) }}
+

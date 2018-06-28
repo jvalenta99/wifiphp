@@ -1,3 +1,5 @@
+
+
 <div class="container "> 
         <div class="row">      
             @if (count($allVeran) > 0)    
@@ -19,3 +21,5 @@
         </div> <!-- /.row -->
         
     </div> <!-- /.container -->
+
+    <!-- /.container -->

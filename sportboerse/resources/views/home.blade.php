@@ -9,7 +9,7 @@
                 <a href="{{ route('sportveranstaltung.index') }}" class="btn btn-primary" role="button">Sportveranstaltung suchen</a>
             </li>
             <li class="list-group-item text-center">
-                <a href="/bewerorg" class="btn btn-warning" role="button">meine Bewerbungen bearbeiten</a>
+                <a href="{{ route('meinSpielplan.index') }}" class="btn btn-warning" role="button">mein Spielplan bearbeiten</a>
             </li>
             <li class="list-group-item text-center">            
                 <a href="{{ route('sportveranstaltung.create') }}" class="btn btn-danger" role="button">neue Sportveranstaltung erstellen</a>

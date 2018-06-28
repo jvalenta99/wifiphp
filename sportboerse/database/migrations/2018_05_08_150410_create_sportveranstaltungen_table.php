@@ -31,6 +31,7 @@ class CreateSportveranstaltungenTable extends Migration
             $table->integer('veranMaxstaerke');
             $table->date('veranBewerbungBis')->nullable($value = true);
             $table->string('veranAdresse')->nullable($value = true);
+            $table->unsignedInteger('veranMaxTeilnehmer')->nullable($value = true);
             $table->timestamps();
         });
     }

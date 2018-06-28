@@ -42,8 +42,8 @@ class SportveranstaltungenTableSeeder extends Seeder
         ]);
 
         DB::table('sportveranstaltungen')->insert([
-            'veranAufschrift' => '3Kleine Fussballrunde',
-            'veranDetailtext' => 'Es wird super,Es wird super,Es wird super,Es wird super,',
+            'veranAufschrift' => 'Eine kleine Fussballrunde',
+            'veranDetailtext' => 'Maximal 20 Teilnehmer, 2x 20 min, bitte vorsichtig spielen!',
             'veranVon' => '1965-04-20 19:00:00',
             'veranBis' => '1965-04-20 20:00:00',
             'veranLand_FK' => '1',

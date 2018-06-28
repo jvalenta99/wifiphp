@@ -1,7 +1,7 @@
 
 
 <div class="jumbotron text-center">
-    <h1 class="display-4">Wie funktioniert Sportbörse</h1>
+    <h1 class="display-4">Wie funktioniert die Sportbörse</h1>
     
         <div class="row">
                 <div class="col-sm-6 p-5">

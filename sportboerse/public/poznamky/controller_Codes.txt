@@ -7,5 +7,6 @@ Route::resource('laender', 'LandController'); create all routes
 in Controller:
 return redirect()->route('routeName',$objectName->ID); weiterleitung auf route
 
+Troubleshooting
 echo request: return dd($request);
 
