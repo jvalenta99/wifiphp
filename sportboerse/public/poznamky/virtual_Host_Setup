@@ -5,6 +5,8 @@ Step 1) C:\WINDOWS\system32\drivers\etc\ Open the "hosts" file :
 127.0.0.1       example.com
 127.0.0.1       sportboerse.dv
 
+save as admin!
+
 Step 2) xampp\apache\conf\extra\httpd-vhosts.conf
 
 <VirtualHost *:80>
@@ -27,4 +29,4 @@ Include conf/extra/httpd-vhosts.conf
 
 Step 4) Restart XAMPP and now run in your browser :
 
-www.example.com or www.test.com or sportboerse.dv
+www.example.com or www.test.com or sportboerse.dv or batterien.dv

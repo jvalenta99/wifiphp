@@ -20,6 +20,7 @@ class CreateSportveranstaltungenTable extends Migration
             $table->dateTime('veranVon');
             $table->dateTime('veranBis');
             $table->unsignedInteger('veranLand_FK');
+            $table->unsignedInteger('veranStorno_FK')->default('0'); //0-aktiv, 1-storno
             $table->unsignedInteger('veranStadt_FK');
             $table->unsignedInteger('veranSportart_FK');
             $table->unsignedInteger('veranOrganisator_FK');

@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('laender', 'LandController');
 Route::resource('sportveranstaltung', 'SportveranstaltungController');
+Route::get('/sportveranstaltungOrganisieren', 'SportveranstaltungController@organisieren')->name('sportveranstaltung.organisieren');
 Route::resource('meinSpielplan', 'MeinSpielplanController');
 
 

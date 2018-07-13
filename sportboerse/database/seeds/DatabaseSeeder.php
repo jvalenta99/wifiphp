@@ -17,11 +17,10 @@ class DatabaseSeeder extends Seeder
         $this->call(LaenderTableSeeder::class);
         $this->call(StaedteTableSeeder::class);
         $this->call(SportartsTableSeeder::class);
-        $this->call(MitspielerTableSeeder::class);
         $this->call(NachrichtenTableSeeder::class);
         $this->call(SportveranstaltungenTableSeeder::class);
+        $this->call(MitspielerTableSeeder::class);
         $this->call(Test2TableSeeder::class);
-               
-        
+       
     }
 }

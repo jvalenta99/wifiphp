@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sportveranstaltung extends Model
 {
+    protected $guarded = ['veran_ID'];
+    
     protected $table = 'sportveranstaltungen';
     protected $primaryKey = 'veran_ID';
 

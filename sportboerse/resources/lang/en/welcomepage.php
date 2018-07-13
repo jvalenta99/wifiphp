@@ -13,7 +13,7 @@
             "spielstärke"=>"Skill level",
             "organisator"=>"Organised by",
             "sportart"=>"Sport category",
-            ""=>"",
+            "editieren"=>"Edit",
             ""=>"",
             ""=>"",
             ""=>"",

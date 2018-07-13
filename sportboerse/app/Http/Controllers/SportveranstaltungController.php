@@ -7,9 +7,14 @@ use App\Land;
 use App\Stadt;
 use App\Sportart;
 use App\Sportveranstaltung;
+use App\Mitspieler;
 Use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
+
+/**
+ * 
+ */
 class SportveranstaltungController extends Controller
 {
 
@@ -34,6 +39,7 @@ class SportveranstaltungController extends Controller
      */
     public function index()
     {
+        
         $allVeran = Sportveranstaltung::orderBy('created_at', 'desc')->get();
         
         // Wir geben $allTasks in einem Array an die View weiter.
@@ -75,7 +81,7 @@ class SportveranstaltungController extends Controller
         //return dd(Auth::id());
         //$id = Auth::id();
         //validate data
-
+       
 
         
             $this->validate($request, array(
@@ -107,7 +113,8 @@ class SportveranstaltungController extends Controller
             $Sportveranstaltung->save();
 
         //redirect to overview of sportveranstaltung
-        return 'saved';
+        //return view('sportveranstaltung');
+        return redirect()->route('sportveranstaltung.index');
     }
 
     /**
@@ -129,7 +136,25 @@ class SportveranstaltungController extends Controller
      */
     public function edit($id)
     {
-        //
+        // in Meine Veranstaltungen organisieren
+        $detVeran = Sportveranstaltung::orderBy('veranVon', 'desc')->where('veran_ID', $id)->firstOrFail();
+        $detVeran->veranVon=Carbon::parse($detVeran->veranVon);
+        //return dd($detVeran);
+       $allMitspieler=Mitspieler::where('veran_FK',$id)->get();
+       $allLand = Land::orderBy('landName', 'asc')->get();
+        $allStadt = Stadt::orderBy('stadtName', 'asc')->get();
+        $allSportart = Sportart::orderBy('sportartsName', 'asc')->get();
+        
+       return view('sportveranstaltung.veranneu', [
+           'detVeran' => $detVeran,
+           'allMitspieler'=>$allMitspieler,
+           'allLand' => $allLand,
+            'allStadt' => $allStadt,
+            'allSportart' => $allSportart,
+
+
+       ]);
+
     }
 
     /**
@@ -141,7 +166,33 @@ class SportveranstaltungController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // speichern was in edit ausgefüllt wurde
+
+        //return dd($id);
+        //return dd( $request);
+
+
+        $this->validate($request, array(
+            'veranAufschrift'=>'required|min:2|max:30',
+            'veranDetailtext'=>'required|min:2|max:255',
+            //'veranVon' => 'required|date|after:tomorrow|before:2025-01-01',
+            //'veranBis' => 'required|date|after:tomorrow|before:2025-01-01',
+            'veranMinstaerke'=>'required|integer|between:1,10',
+            'veranMaxstaerke'=>'required|integer|between:1,10',
+            'veranAdresse'=>'required|min:2|max:255',
+            'veranMaxTeilnehmer'=>'required|integer|between:1,1500',
+
+        ));
+
+    //open Object
+    $updateVeran = Sportveranstaltung::find($id);
+    //return dd( $updateVeran->veranAufschrift);
+    //napsat kod kontrolujici jestli $id patri vlastnikovi!!
+    $updateVeran->fill($request->all())->save();
+  
+    //redirect to overview of sportveranstaltung
+    //return view('sportveranstaltung');
+    return redirect()->route('sportveranstaltung.index');
     }
 
     /**
@@ -154,4 +205,21 @@ class SportveranstaltungController extends Controller
     {
         //
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function organisieren()
+    {
+        
+        $allVeran = Sportveranstaltung::orderBy('created_at', 'desc')->where('veranOrganisator_FK',Auth::id())->get();
+        
+        return view('sportveranstaltung.organisieren.liste', [
+            'allVeran' => $allVeran
+        ]);
+        
+    }
+
 }

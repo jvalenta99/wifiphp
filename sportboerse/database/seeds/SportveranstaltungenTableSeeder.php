@@ -24,6 +24,7 @@ class SportveranstaltungenTableSeeder extends Seeder
             'veranMaxstaerke' => '7',
             'veranBewerbungBis' => '1963-04-20',
             'veranAdresse' => 'Tokiostrasse 7, 1220 Wien',
+            'veranMaxTeilnehmer' => '10',
         ]);
 
         DB::table('sportveranstaltungen')->insert([
@@ -39,6 +40,7 @@ class SportveranstaltungenTableSeeder extends Seeder
             'veranMaxstaerke' => '7',
             'veranBewerbungBis' => '1966-04-20',
             'veranAdresse' => 'Tokiostrasse 12, 1220 Wien',
+            'veranMaxTeilnehmer' => '10',
         ]);
 
         DB::table('sportveranstaltungen')->insert([
@@ -49,26 +51,60 @@ class SportveranstaltungenTableSeeder extends Seeder
             'veranLand_FK' => '1',
             'veranStadt_FK' => '1',
             'veranSportart_FK' => '1',
-            'veranOrganisator_FK' => '3',
+            'veranOrganisator_FK' => '6',
             'veranMinstaerke' => '3',
             'veranMaxstaerke' => '7',
             'veranBewerbungBis' => '1964-04-20',
             'veranAdresse' => 'Tokiostrasse 7, 1220 Wien',
+            'veranMaxTeilnehmer' => '10',
         ]);
 
         DB::table('sportveranstaltungen')->insert([
-            'veranAufschrift' => '4Kleine Fussballrunde',
-            'veranDetailtext' => 'Es wird super,Es wird super,Es wird super,Es wird super,',
+            'veranAufschrift' => 'Grosse Fussballrunde',
+            'veranDetailtext' => 'Kleine Tore, max. 4 gegen 4 mit Auswechslung',
             'veranVon' => '1966-04-20 20:00:00',
             'veranBis' => '1966-04-20 21:00:00',
             'veranLand_FK' => '1',
             'veranStadt_FK' => '1',
             'veranSportart_FK' => '1',
-            'veranOrganisator_FK' => '3',
+            'veranOrganisator_FK' => '6',
             'veranMinstaerke' => '3',
             'veranMaxstaerke' => '7',
             'veranBewerbungBis' => '1966-04-20',
             'veranAdresse' => 'Tokiostrasse 7, 1220 Wien',
+            'veranMaxTeilnehmer' => '10',
+        ]);
+
+        DB::table('sportveranstaltungen')->insert([
+            'veranAufschrift' => 'Fussbal Jugendturnier',
+            'veranDetailtext' => '3er Teams gegeneinander',
+            'veranVon' => '2020-04-20 20:00:00',
+            'veranBis' => '2021-04-20 21:00:00',
+            'veranLand_FK' => '1',
+            'veranStadt_FK' => '1',
+            'veranSportart_FK' => '1',
+            'veranOrganisator_FK' => '6',
+            'veranMinstaerke' => '3',
+            'veranMaxstaerke' => '7',
+            'veranBewerbungBis' => '1966-04-20',
+            'veranAdresse' => 'Tokiostrasse 7, 1220 Wien',
+            'veranMaxTeilnehmer' => '30',
+        ]);
+
+        DB::table('sportveranstaltungen')->insert([
+            'veranAufschrift' => 'Alt gegen jung',
+            'veranDetailtext' => 'Erfahrung gegen Kondition, wir wollen es wissen!',
+            'veranVon' => '2022-04-20 20:00:00',
+            'veranBis' => '2023-04-20 21:00:00',
+            'veranLand_FK' => '1',
+            'veranStadt_FK' => '1',
+            'veranSportart_FK' => '1',
+            'veranOrganisator_FK' => '5',
+            'veranMinstaerke' => '3',
+            'veranMaxstaerke' => '7',
+            'veranBewerbungBis' => '1966-04-20',
+            'veranAdresse' => 'Tokiostrasse 7, 1220 Wien',
+            'veranMaxTeilnehmer' => '20',
         ]);
     }
 }

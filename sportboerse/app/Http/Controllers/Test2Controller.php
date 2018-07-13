@@ -9,6 +9,8 @@ Use Carbon\Carbon;
 
 class Test2Controller extends Controller
 {
+    
+    
     /**
      * Display a listing of the resource.
      *

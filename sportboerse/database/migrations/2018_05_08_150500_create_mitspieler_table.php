@@ -18,7 +18,7 @@ class CreateMitspielerTable extends Migration
             $table->unsignedInteger('benut_FK');
             $table->unsignedInteger('veran_FK');
             $table->unsignedInteger('status_FK');
-            $table->unsignedInteger('bewertung');
+            $table->unsignedInteger('bewertung')->nullable($value = true);
             $table->foreign('benut_FK')->references('id')->on('users');
             $table->foreign('veran_FK')->references('veran_ID')->on('sportveranstaltungen');
             $table->foreign('status_FK')->references('stasp_ID')->on('status_spieler');

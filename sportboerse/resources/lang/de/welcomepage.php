@@ -13,7 +13,7 @@
             "spielstärke"=>"Spielstärke",
             "organisator"=>"Veranstaltet von",
             "sportart"=>"Sportart",
-            ""=>"",
+            "editieren"=>"Editieren",
             ""=>"",
             ""=>"",
             ""=>"",

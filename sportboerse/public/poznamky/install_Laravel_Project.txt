@@ -3,5 +3,7 @@ dopsat!!
 1.install composer
 
 2.install project to http root
+    a. go to http root directory with cmd
+    b. run composer create-project --prefer-dist laravel/laravel nameOfProject
 
 3.set virtual host ..->virtualHostSetup

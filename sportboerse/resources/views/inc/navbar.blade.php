@@ -21,8 +21,9 @@
             <ul class="nav navbar-nav">
                 &nbsp;
                 <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/home">Hauptmenü <span class="sr-only">(current)</span></a>
                  </li>
+                 
             </ul>
 
             <!-- Right Side Of Navbar -->

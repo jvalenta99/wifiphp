@@ -11,7 +11,12 @@
                                     <h3>{{ $veran->veranAufschrift }}</h3>
                                     <p>{{ $veran->veranDetailtext }}</p>
                                     <p>@lang('welcomepage.in') {{ $veran->Stadt->stadtName }}, {{ $veran->Land->landName }}</p>
+                                    @if( $veran->veranOrganisator_FK==Auth::id())
+                                    
+                                    <p><a class="btn btn-primary" href="/sportveranstaltung/{{$veran->veran_ID}}/edit" role="button">@lang("welcomepage.editieren") &raquo;</a></p>
+                                    @else
                                     <p><a class="btn btn-primary" href="/verandet/{{$veran->veran_ID}}" role="button">@lang("welcomepage.viewdetails") &raquo;</a></p>
+                                    @endif
                                 </div>
                             </div>
                             <hr class="my-4">

@@ -7,6 +7,8 @@ Route::resource('laender', 'LandController'); create all routes
 in Controller:
 return redirect()->route('routeName',$objectName->ID); weiterleitung auf route
 
+Mitspieler::orderBy('created_at', 'desc')->where('benut_FK',Auth::id())->get();
+
 Troubleshooting
 echo request: return dd($request);
 

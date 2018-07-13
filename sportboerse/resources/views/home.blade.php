@@ -15,7 +15,7 @@
                 <a href="{{ route('sportveranstaltung.create') }}" class="btn btn-danger" role="button">neue Sportveranstaltung erstellen</a>
             </li>
             <li class="list-group-item text-center">            
-                <a href="/meineveranorg" class="btn btn-success" role="button">meine Sportveranstaltungen organisieren</a>
+                <a href="{{ route('sportveranstaltung.organisieren') }}" class="btn btn-success" role="button">meine Sportveranstaltungen organisieren</a>
             </li>   
         </ul>
   </div>
