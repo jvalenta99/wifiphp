@@ -7,3 +7,6 @@ dopsat!!
     b. run composer create-project --prefer-dist laravel/laravel nameOfProject
 
 3.set virtual host ..->virtualHostSetup
+4.install user management
+    php artisan make:auth
+5.repair error für migration
